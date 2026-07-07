@@ -1,0 +1,24 @@
+[
+  {
+    "file": "src/views/login/index.vue",
+    "name": "Login",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "data": [
+      "(function)"
+    ],
+    "computed": [],
+    "watch": [
+      "$route"
+    ],
+    "methods": [
+      "checkCapslock",
+      "showPwd",
+      "handleLogin",
+      "getOtherQuery"
+    ],
+    "mixins": [],
+    "uid": 4
+  }
+]

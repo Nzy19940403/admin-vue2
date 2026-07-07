@@ -1,0 +1,1259 @@
+{
+  "meta": {
+    "generatedAt": "2026-06-24T16:14:28.493Z",
+    "srcRoot": "D:\\project\\microapp\\vue-element-admin\\src"
+  },
+  "graph": {
+    "D:\\project\\microapp\\vue-element-admin\\src\\styles\\element-variables.scss": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\styles\\index.scss": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\SvgIcon\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-log\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\list.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\export-excel.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\vendor\\Export2Excel.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\tab\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\theme\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\layout\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\documentation\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\401.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\404.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\icons\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\login\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\pdf\\download.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\pdf\\content.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\directive.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\role.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\keyboard.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\line.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\mix-chart.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\avatar-upload.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\back-to-top.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\count-to.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\json-editor.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\markdown.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\mixin.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\split-pane.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\sticky.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\tinymce.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\drag-table.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\inline-edit-table.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\assets\\custom-theme\\index.css": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\drag-kanban.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Pagination\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\RightPanel\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\UploadExcel\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Share\\DropdownMenu.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\admin\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\editor\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\components\\ArticleDetail.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\login\\components\\SocialSignin.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\profile\\components\\Activity.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\profile\\components\\UserCard.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\BackToTop\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Dropzone\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\PanThumb\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\TextHoverEffect\\Mallki.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\directive\\waves\\waves.css": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\DndList\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\DragSelect\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\ImageCropper\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\JsonEditor\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Kanban\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\MDinput\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Tinymce\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\AppMain.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\Navbar.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\Settings\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\TagsView\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\styles\\variables.scss": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\GithubCorner\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Upload\\SingleImage3.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\admin\\components\\BoxCard.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\admin\\components\\PanelGroup.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\admin\\components\\TodoList\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\ErrorLog\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Hamburger\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Screenfull\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\ThemePicker\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Breadcrumb\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\HeaderSearch\\index.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Tinymce\\components\\EditorImage.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\Sidebar\\Logo.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\TagsView\\ScrollPane.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\Sidebar\\Item.vue": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\HeaderSearch\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\Navbar.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Screenfull\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\RightPanel\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\AppMain.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\index.js + 1 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\TagsView\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\Settings\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\validate.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\ErrorLog\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Breadcrumb\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\layout\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Hamburger\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\styles\\variables.scss",
+      "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\TagsView\\ScrollPane.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\index.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\Sidebar\\Logo.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\ThemePicker\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\Sidebar\\Item.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\settings.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\styles\\element-variables.scss",
+      "D:\\project\\microapp\\vue-element-admin\\src\\settings.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules sync \\.js$": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\settings.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\user.js + 1 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\permission.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\errorLog.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\tagsView.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\app.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\edit.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\components\\ArticleDetail.vue + 29 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\edit.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\merge-header.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\icons\\index.vue + 6 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\404.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\401.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\page.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\pdf\\download.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\documentation\\index.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\select-excel.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\pdf\\index.vue + 2 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\export-excel.vue + 19 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\guide\\index.vue + 5 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\index.vue + 63 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\tab\\index.vue + 9 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\list.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\create.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\login\\index.vue + 9 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\upload-excel.vue + 9 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\directive.vue + 7 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\login\\auth-redirect.vue + 2 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-log\\index.vue + 14 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\zip\\index.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\theme\\index.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\role.vue + 5 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\profile\\index.vue + 24 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\redirect\\index.vue + 2 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\clipboard\\index.vue + 6 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\skill.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\skill.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\shopping.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\qq.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\bug.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\international.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\link.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\language.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\password.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\peoples.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\money.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\example.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\list.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\table.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\message.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\eye.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\component.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\excel.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\guide.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\star.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\wechat.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\size.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\zip.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\search.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\tab.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\documentation.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\tree.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\fullscreen.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\drag.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\icon.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\404.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\edit.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\lock.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\education.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\user.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\clipboard.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\chart.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\email.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\people.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\eye-open.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\exit-fullscreen.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\nested.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\theme.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\tree-table.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\form.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\dashboard.svg",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\pdf.svg"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\icons\\index.vue + 6 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\icons\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\clipboard.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\components\\ArticleDetail.vue + 29 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\components\\ArticleDetail.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\MDinput\\index.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\api\\article.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\validate.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Tinymce\\index.vue + 12 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\api\\remote-search.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Upload\\SingleImage3.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\request.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Sticky\\index.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\theme\\index.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\assets\\custom-theme\\index.css",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\theme\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\merge-header.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\api\\article.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\user.js + 1 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\auth.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\request.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\line.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\line.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Charts\\mixins\\resize.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\create.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\components\\ArticleDetail.vue + 29 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\shopping.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\TextHoverEffect\\Mallki.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\TextHoverEffect\\Mallki.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\index.vue + 63 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\TextHoverEffect\\Mallki.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\PanThumb\\index.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\admin\\components\\BoxCard.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\admin\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\admin\\components\\TodoList\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\api\\remote-search.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\admin\\components\\PanelGroup.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\editor\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\GithubCorner\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\mixin.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\TextHoverEffect\\Mallki.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\MDinput\\index.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\PanThumb\\index.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\directive\\waves\\index.js + 1 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Share\\DropdownMenu.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\mixin.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\qq.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\dnd-list.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\api\\article.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\DndList\\index.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\components.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\dnd-list.vue + 9 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\dropzone.vue + 9 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\tinymce.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\count-to.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\markdown.vue + 10 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\avatar-upload.vue + 13 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\mixin.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\split-pane.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\drag-kanban.vue + 9 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\drag-dialog.vue + 6 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\drag-select.vue + 9 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\sticky.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\json-editor.vue + 9 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\back-to-top.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\bug.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\international.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\dropzone.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Dropzone\\index.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\link.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\MDinput\\index.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\MDinput\\index.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\export-excel.vue + 19 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\export-excel.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\api\\article.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\404.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\404.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\assets\\404_images\\404_cloud.png",
+      "D:\\project\\microapp\\vue-element-admin\\src\\assets\\404_images\\404.png"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\api\\article.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\request.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\select-excel.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\api\\article.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\drag-table.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\api\\article.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\drag-table.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\inline-edit-table.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\api\\article.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\inline-edit-table.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\tab\\index.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\api\\article.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\tab\\index.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\list.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\api\\article.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Pagination\\index.vue + 5 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\list.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\complex-table.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\api\\article.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Pagination\\index.vue + 5 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\directive\\waves\\index.js + 1 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\zip\\index.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\api\\article.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\main.js + 15 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\styles\\element-variables.scss",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\SvgIcon\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\index.js + 1 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\auth.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\validate.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\settings.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\styles\\index.scss",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\401.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\assets\\401_images\\401.gif",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\401.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\language.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-log\\index.vue + 14 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-log\\index.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\assets\\404_images\\404_cloud.png": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\drag-kanban.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\drag-kanban.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Kanban\\index.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\password.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\back-to-top.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\back-to-top.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\BackToTop\\index.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\tinymce.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\tinymce.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Tinymce\\index.vue + 12 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Pagination\\index.vue + 5 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Pagination\\index.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\peoples.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\money.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\example.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\permission.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\profile\\index.vue + 24 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\profile\\components\\UserCard.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\PanThumb\\index.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\profile\\components\\Activity.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\page.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\components\\SwitchRoles.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\list.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\pdf\\download.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\pdf\\download.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\documentation\\index.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\documentation\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Share\\DropdownMenu.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\PanThumb\\index.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\PanThumb\\index.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\avatar-upload.vue + 13 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\PanThumb\\index.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\ImageCropper\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\avatar-upload.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\request.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Tinymce\\index.vue + 12 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Tinymce\\components\\EditorImage.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Tinymce\\index.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\json-editor.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\json-editor.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\JsonEditor\\index.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\count-to.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\count-to.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\pdf\\index.vue + 2 modules": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\store\\index.js + 1 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules sync \\.js$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\directive.vue + 7 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\index.js + 1 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\components\\SwitchRoles.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\directive.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\utils\\request.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\index.js + 1 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\auth.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\markdown.vue + 10 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\markdown.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\table.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\message.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\sticky.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\sticky.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Sticky\\index.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\vendor\\Export2Excel.js": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\merge-header.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\vendor\\Export2Excel.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\select-excel.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\vendor\\Export2Excel.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\complex-table.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\vendor\\Export2Excel.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\errorLog.js": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\eye.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\menu1-2\\index.vue + 2 modules": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\nested.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\menu1-2\\index.vue + 2 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\menu1-2\\menu1-2-1\\index.vue + 2 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\menu1-3\\index.vue + 2 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\menu1-1\\index.vue + 2 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\menu1-2\\menu1-2-2\\index.vue + 2 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu2\\index.vue + 2 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\index.vue + 2 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\component.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\utils\\auth.js": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\charts.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\line.vue + 9 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\keyboard.vue + 9 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\mix-chart.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\utils\\validate.js": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\login\\index.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\validate.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\login\\index.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\login\\components\\SocialSignin.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\menu1-2\\menu1-2-1\\index.vue + 2 modules": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\excel.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\guide.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\directive\\waves\\index.js + 1 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\directive\\waves\\waves.css"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\star.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\split-pane.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\split-pane.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\guide\\index.vue + 5 modules": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Share\\DropdownMenu.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Share\\DropdownMenu.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\table.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\drag-table.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\inline-edit-table.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\dynamic-table\\index.vue + 14 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\complex-table.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\tagsView.js": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\drag-select.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\DragSelect\\index.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\wechat.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\keyboard.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\keyboard.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Charts\\mixins\\resize.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\api\\remote-search.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\request.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\settings.js": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\size.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\zip.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\menu1-3\\index.vue + 2 modules": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\search.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\components\\SwitchRoles.vue + 4 modules": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\tab.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\documentation.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\menu1-1\\index.vue + 2 modules": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\tree.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\fullscreen.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\pdf\\content.js": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\drag.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\icon.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\upload-excel.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\UploadExcel\\index.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\404.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\assets\\404_images\\404.png": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\edit.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\lock.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\education.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\dynamic-table\\index.vue + 14 modules": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\user.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\menu1-2\\menu1-2-2\\index.vue + 2 modules": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\role.vue + 5 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\request.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\role.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Sticky\\index.vue + 4 modules": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\login\\auth-redirect.vue + 2 modules": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\drag-dialog.vue + 6 modules": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\clipboard.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\chart.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\email.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\assets\\401_images\\401.gif": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\vendor\\Export2Zip.js": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\zip\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\vendor\\Export2Zip.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\people.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\eye-open.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\app.js": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu2\\index.vue + 2 modules": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\exit-fullscreen.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\nested.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\theme.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\tree-table.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\index.vue + 2 modules": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\form.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\utils\\index.js": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Charts\\mixins\\resize.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\redirect\\index.vue + 2 modules": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\mix-chart.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Charts\\mixins\\resize.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\mix-chart.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\utils\\clipboard.js": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\clipboard\\index.vue + 6 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\clipboard.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\dashboard.svg": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\pdf.svg": []
+  },
+  "reverse": {
+    "D:\\project\\microapp\\vue-element-admin\\src\\styles\\element-variables.scss": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\settings.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\main.js + 15 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\styles\\index.scss": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\main.js + 15 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\SvgIcon\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\main.js + 15 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-log\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-log\\index.vue + 14 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\list.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\list.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\export-excel.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\export-excel.vue + 19 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\tab\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\tab\\index.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\theme\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\theme\\index.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\layout\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\documentation\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\documentation\\index.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\401.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\401.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\404.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\404.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\icons\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\icons\\index.vue + 6 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\login\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\login\\index.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\pdf\\download.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\pdf\\download.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\directive.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\directive.vue + 7 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\role.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\role.vue + 5 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\keyboard.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\keyboard.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\line.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\line.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\mix-chart.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\mix-chart.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\avatar-upload.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\avatar-upload.vue + 13 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\back-to-top.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\back-to-top.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\count-to.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\count-to.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\json-editor.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\json-editor.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\markdown.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\markdown.vue + 10 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\mixin.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\mixin.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\split-pane.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\split-pane.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\sticky.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\sticky.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\tinymce.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\tinymce.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\drag-table.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\drag-table.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\inline-edit-table.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\inline-edit-table.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\assets\\custom-theme\\index.css": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\theme\\index.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\drag-kanban.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\drag-kanban.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Pagination\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Pagination\\index.vue + 5 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\RightPanel\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\UploadExcel\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\upload-excel.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Share\\DropdownMenu.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Share\\DropdownMenu.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\admin\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\index.vue + 63 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\editor\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\index.vue + 63 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\components\\ArticleDetail.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\components\\ArticleDetail.vue + 29 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\login\\components\\SocialSignin.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\login\\index.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\profile\\components\\Activity.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\profile\\index.vue + 24 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\profile\\components\\UserCard.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\profile\\index.vue + 24 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\BackToTop\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\back-to-top.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Dropzone\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\dropzone.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\PanThumb\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\PanThumb\\index.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\TextHoverEffect\\Mallki.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\TextHoverEffect\\Mallki.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\directive\\waves\\waves.css": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\directive\\waves\\index.js + 1 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\DndList\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\dnd-list.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\DragSelect\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\drag-select.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\ImageCropper\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\avatar-upload.vue + 13 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\JsonEditor\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\json-editor.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Kanban\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\drag-kanban.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\MDinput\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\MDinput\\index.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Tinymce\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Tinymce\\index.vue + 12 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\AppMain.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\Navbar.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\Settings\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\TagsView\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\styles\\variables.scss": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\GithubCorner\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\index.vue + 63 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Upload\\SingleImage3.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\components\\ArticleDetail.vue + 29 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\admin\\components\\BoxCard.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\index.vue + 63 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\admin\\components\\PanelGroup.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\index.vue + 63 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\admin\\components\\TodoList\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\index.vue + 63 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\ErrorLog\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Hamburger\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Screenfull\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\ThemePicker\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Breadcrumb\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\HeaderSearch\\index.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Tinymce\\components\\EditorImage.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Tinymce\\index.vue + 12 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\Sidebar\\Logo.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\TagsView\\ScrollPane.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\layout\\components\\Sidebar\\Item.vue": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\settings.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules sync \\.js$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\edit.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\skill.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\merge-header.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\user.js + 1 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules sync \\.js$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\icons\\index.vue + 6 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\components\\ArticleDetail.vue + 29 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\edit.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\create.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\shopping.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\TextHoverEffect\\Mallki.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\index.vue + 63 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\mixin.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\qq.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\dnd-list.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\components.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\bug.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\international.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\dropzone.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\components.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\link.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\MDinput\\index.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\components\\ArticleDetail.vue + 29 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\mixin.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\404.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\api\\article.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\merge-header.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\components\\ArticleDetail.vue + 29 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\dnd-list.vue + 9 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\select-excel.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\export-excel.vue + 19 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\drag-table.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\inline-edit-table.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\tab\\index.vue + 9 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\list.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\complex-table.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\zip\\index.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\401.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\language.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\assets\\404_images\\404_cloud.png": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\404.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\password.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\tinymce.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\components.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\peoples.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\money.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\example.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\permission.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules sync \\.js$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\page.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\list.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Pagination\\index.vue + 5 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\list.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\complex-table.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\pdf\\download.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\documentation\\index.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\PanThumb\\index.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\avatar-upload.vue + 13 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\index.vue + 63 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\mixin.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\profile\\index.vue + 24 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\select-excel.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\count-to.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\components.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\pdf\\index.vue + 2 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\store\\index.js + 1 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\main.js + 15 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\directive.vue + 7 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\request.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\markdown.vue + 10 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\components.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\table.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\message.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\vendor\\Export2Excel.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\merge-header.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\select-excel.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\export-excel.vue",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\complex-table.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\errorLog.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules sync \\.js$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\eye.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\icons\\index.vue + 6 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\main.js + 15 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\menu1-2\\index.vue + 2 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\nested.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\component.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\main.js + 15 modules": [],
+    "D:\\project\\microapp\\vue-element-admin\\src\\utils\\auth.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\user.js + 1 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\main.js + 15 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\utils\\request.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\export-excel.vue + 19 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\line.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\charts.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\utils\\validate.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\components\\ArticleDetail.vue + 29 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\main.js + 15 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\login\\index.vue + 9 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\menu1-2\\menu1-2-1\\index.vue + 2 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\nested.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\excel.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\guide.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\directive\\waves\\index.js + 1 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\mixin.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\complex-table.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\star.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\guide\\index.vue + 5 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\drag-table.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\table.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\tagsView.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules sync \\.js$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\avatar-upload.vue + 13 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\components.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Share\\DropdownMenu.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\documentation\\index.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\mixin.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\wechat.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Tinymce\\index.vue + 12 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\components\\ArticleDetail.vue + 29 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\tinymce.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\api\\remote-search.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\components\\ArticleDetail.vue + 29 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\index.vue + 63 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\keyboard.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\charts.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\settings.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\settings.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\main.js + 15 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\size.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\zip.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\menu1-3\\index.vue + 2 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\nested.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\search.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\components\\SwitchRoles.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\page.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\directive.vue + 7 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\tab.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\documentation.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\menu1-1\\index.vue + 2 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\nested.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\tree.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\index.vue + 63 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\fullscreen.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\inline-edit-table.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\table.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\tab\\index.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\pdf\\content.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\pdf\\download.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\drag.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\list.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\create.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\icon.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\login\\index.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\mixin.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\components.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\upload-excel.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\404.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\user.js + 1 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\permission.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\main.js + 15 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\assets\\404_images\\404.png": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\404.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\split-pane.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\components.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\directive.vue + 7 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\edit.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\lock.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\education.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\drag-kanban.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\components.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\dynamic-table\\index.vue + 14 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\table.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\user.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\menu1-2\\menu1-2-2\\index.vue + 2 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\nested.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\utils\\request.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\user.js + 1 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\components\\ArticleDetail.vue + 29 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\api\\article.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\avatar-upload.vue + 13 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\api\\remote-search.js",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\role.vue + 5 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Sticky\\index.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\example\\components\\ArticleDetail.vue + 29 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\sticky.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\login\\auth-redirect.vue + 2 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\drag-dialog.vue + 6 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\components.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\clipboard.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\complex-table.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\table.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-log\\index.vue + 14 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\drag-select.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\components.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules sync \\.js$": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\index.js + 1 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\chart.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\sticky.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\components.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\zip\\index.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\email.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\assets\\401_images\\401.gif": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\error-page\\401.vue + 4 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\vendor\\Export2Zip.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\zip\\index.vue"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\people.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\theme\\index.vue + 4 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\role.vue + 5 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\eye-open.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules\\app.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\store\\modules sync \\.js$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu2\\index.vue + 2 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\nested.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\exit-fullscreen.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\nested.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\json-editor.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\components.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\theme.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\components-demo\\back-to-top.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\components.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\tree-table.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\nested\\menu1\\index.vue + 2 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\nested.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\form.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\profile\\index.vue + 24 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\utils\\index.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\merge-header.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\main.js + 15 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\excel\\export-excel.vue + 19 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\dashboard\\index.vue + 63 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js + 100 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\table\\complex-table.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\theme\\index.vue + 4 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\permission\\role.vue + 5 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\components\\Charts\\mixins\\resize.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\redirect\\index.vue + 2 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\mix-chart.vue + 9 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\modules\\charts.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\components\\Charts\\mixins\\resize.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\line.vue + 9 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\keyboard.vue + 9 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\charts\\mix-chart.vue + 9 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\utils\\clipboard.js": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\icons\\index.vue + 6 modules",
+      "D:\\project\\microapp\\vue-element-admin\\src\\views\\clipboard\\index.vue + 6 modules"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\views\\clipboard\\index.vue + 6 modules": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\router\\index.js"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\dashboard.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ],
+    "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg\\pdf.svg": [
+      "D:\\project\\microapp\\vue-element-admin\\src\\icons\\svg sync nonrecursive \\.svg$"
+    ]
+  }
+}

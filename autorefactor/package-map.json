@@ -1,0 +1,16 @@
+{
+  "description": "npm → 本地文件映射。assembler 根据此表创建合成 manifest 条目，meshflow 自动编排生成顺序。",
+  "mappings": [
+    {
+      "sourcePackage": "vue-count-to",
+      "targetFile": "components/CountTo.vue",
+      "type": "vue3-component",
+      "props": [
+        "startVal: number (default 0)",
+        "endVal: number (required)",
+        "duration: number (default 2000)"
+      ],
+      "note": "简单计数器组件，Vue 3 <script setup> 实现，用 ref + requestAnimationFrame 做数字递增动画"
+    }
+  ]
+}

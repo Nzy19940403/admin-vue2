@@ -1,24 +1,4726 @@
 [
   {
-    "file": "src/views/login/index.vue",
-    "name": "Login",
+    "file": "src/App.vue",
+    "name": "App",
     "props": [],
     "emits": [],
     "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [],
+    "watch": [],
+    "methods": [],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      3
+    ]
+  },
+  {
+    "file": "src/layout/index.vue",
+    "name": "Layout",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [
+      "classObj",
+      "device",
+      "fixedHeader",
+      "needTagsView",
+      "showSettings",
+      "sidebar"
+    ],
+    "watch": [],
+    "methods": [
+      "$_isMobile",
+      "$_resizeHandler",
+      "handleClickOutside"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      4
+    ]
+  },
+  {
+    "file": "src/layout/components/Sidebar/index.vue",
+    "name": "",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [
+      "activeMenu",
+      "isCollapse",
+      "permission_routes",
+      "showLogo",
+      "sidebar",
+      "variables"
+    ],
+    "watch": [],
+    "methods": [],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      5
+    ]
+  },
+  {
+    "file": "packages/menu/src/menu.vue",
+    "name": "ElMenu",
+    "props": [
+      "activeTextColor",
+      "backgroundColor",
+      "collapse",
+      "collapseTransition",
+      "defaultActive",
+      "defaultOpeneds",
+      "menuTrigger",
+      "mode",
+      "router",
+      "textColor",
+      "uniqueOpened"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [
+      "(function)",
+      "rootMenu"
+    ],
     "data": [
-      "(function)"
+      "activeIndex",
+      "items",
+      "openedMenus",
+      "submenus"
+    ],
+    "computed": [
+      "hoverBackground",
+      "isMenuPopup"
+    ],
+    "watch": [
+      "collapse",
+      "defaultActive",
+      "defaultOpeneds"
+    ],
+    "methods": [
+      "addItem",
+      "addSubmenu",
+      "broadcast",
+      "close",
+      "closeMenu",
+      "dispatch",
+      "getColorChannels",
+      "getMigratingConfig",
+      "handleItemClick",
+      "handleSubmenuClick",
+      "initOpenedMenu",
+      "mixColor",
+      "open",
+      "openMenu",
+      "removeItem",
+      "removeSubmenu",
+      "routeToItem",
+      "updateActiveIndex"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      7
+    ]
+  },
+  {
+    "file": "src/layout/components/Sidebar/SidebarItem.vue",
+    "name": "SidebarItem",
+    "props": [
+      "basePath",
+      "isNest",
+      "item"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [
+      "device"
+    ],
+    "watch": [],
+    "methods": [
+      "fixBugIniOS",
+      "hasOneShowingChild",
+      "resolvePath"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      10,
+      102,
+      106,
+      11,
+      110,
+      114,
+      118,
+      12,
+      122,
+      126,
+      13,
+      130,
+      133,
+      137,
+      140,
+      144,
+      148,
+      152,
+      156,
+      160,
+      164,
+      168,
+      172,
+      176,
+      179,
+      18,
+      184,
+      185,
+      190,
+      195,
+      199,
+      203,
+      207,
+      212,
+      216,
+      220,
+      224,
+      228,
+      23,
+      232,
+      236,
+      240,
+      245,
+      246,
+      251,
+      256,
+      260,
+      28,
+      29,
+      33,
+      37,
+      41,
+      45,
+      50,
+      54,
+      58,
+      62,
+      66,
+      70,
+      74,
+      78,
+      8,
+      82,
+      86,
+      9,
+      90,
+      94,
+      98
+    ]
+  },
+  {
+    "file": "src/layout/components/Sidebar/Link.vue",
+    "name": "",
+    "props": [
+      "to"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [
+      "isExternal",
+      "type"
+    ],
+    "watch": [],
+    "methods": [
+      "linkProps"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      103,
+      107,
+      115,
+      119,
+      123,
+      134,
+      14,
+      141,
+      145,
+      149,
+      153,
+      161,
+      165,
+      169,
+      173,
+      180,
+      186,
+      19,
+      191,
+      200,
+      204,
+      208,
+      217,
+      221,
+      225,
+      229,
+      237,
+      24,
+      241,
+      247,
+      252,
+      257,
+      34,
+      38,
+      42,
+      46,
+      55,
+      59,
+      63,
+      67,
+      71,
+      75,
+      79,
+      83,
+      87,
+      91,
+      95,
+      99
+    ]
+  },
+  {
+    "file": "packages/menu/src/menu-item.vue",
+    "name": "ElMenuItem",
+    "props": [
+      "disabled",
+      "index",
+      "route"
+    ],
+    "emits": [],
+    "inject": [
+      "rootMenu"
+    ],
+    "provide": [],
+    "data": [],
+    "computed": [
+      "active",
+      "activeTextColor",
+      "backgroundColor",
+      "hoverBackground",
+      "indexPath",
+      "isNested",
+      "itemStyle",
+      "mode",
+      "paddingStyle",
+      "parentMenu",
+      "textColor"
+    ],
+    "watch": [],
+    "methods": [
+      "broadcast",
+      "dispatch",
+      "handleClick",
+      "onMouseEnter",
+      "onMouseLeave"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [],
+    "slots": [
+      "default",
+      "title"
+    ],
+    "scopedSlots": [
+      "default",
+      "title"
+    ],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      101,
+      105,
+      109,
+      117,
+      121,
+      125,
+      136,
+      143,
+      147,
+      151,
+      155,
+      16,
+      163,
+      167,
+      171,
+      175,
+      182,
+      188,
+      193,
+      202,
+      206,
+      21,
+      210,
+      219,
+      223,
+      227,
+      231,
+      239,
+      243,
+      249,
+      254,
+      258,
+      26,
+      36,
+      40,
+      44,
+      48,
+      57,
+      61,
+      65,
+      69,
+      73,
+      77,
+      81,
+      85,
+      89,
+      93,
+      97
+    ]
+  },
+  {
+    "file": "src/components/SvgIcon/index.vue",
+    "name": "SvgIcon",
+    "props": [
+      "className",
+      "iconClass"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [
+      "iconName",
+      "isExternal",
+      "styleExternalIcon",
+      "svgClass"
+    ],
+    "watch": [],
+    "methods": [],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [
+      "click"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      112,
+      128,
+      158,
+      17,
+      183,
+      189,
+      194,
+      197,
+      211,
+      214,
+      22,
+      234,
+      244,
+      250,
+      255,
+      259,
+      27,
+      272,
+      282,
+      287,
+      31,
+      49,
+      52
+    ]
+  },
+  {
+    "file": "packages/menu/src/submenu.vue",
+    "name": "ElSubmenu",
+    "props": [
+      "boundariesPadding",
+      "disabled",
+      "hideTimeout",
+      "index",
+      "offset",
+      "popperAppendToBody",
+      "popperClass",
+      "popperOptions",
+      "showTimeout",
+      "transformOrigin"
+    ],
+    "emits": [],
+    "inject": [
+      "rootMenu"
+    ],
+    "provide": [],
+    "data": [
+      "currentPlacement",
+      "items",
+      "mouseInChild",
+      "popperJS",
+      "showPopper",
+      "submenus",
+      "timeout"
+    ],
+    "computed": [
+      "active",
+      "activeTextColor",
+      "appendToBody",
+      "backgroundColor",
+      "hoverBackground",
+      "indexPath",
+      "isFirstLevel",
+      "isMenuPopup",
+      "menuTransitionName",
+      "mode",
+      "opened",
+      "paddingStyle",
+      "parentMenu",
+      "textColor",
+      "titleStyle"
+    ],
+    "watch": [
+      "opened"
+    ],
+    "methods": [
+      "addItem",
+      "addSubmenu",
+      "appendArrow",
+      "broadcast",
+      "createPopper",
+      "destroyPopper",
+      "dispatch",
+      "doDestroy",
+      "handleClick",
+      "handleCollapseToggle",
+      "handleMouseenter",
+      "handleMouseleave",
+      "handleTitleMouseenter",
+      "handleTitleMouseleave",
+      "initPopper",
+      "removeItem",
+      "removeSubmenu",
+      "resetTransformOrigin",
+      "updatePlacement",
+      "updatePopper"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [
+      "submenu-title"
+    ],
+    "slots": [
+      "default",
+      "title"
+    ],
+    "scopedSlots": [
+      "default",
+      "title"
+    ],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      111,
+      127,
+      131,
+      138,
+      157,
+      177,
+      196,
+      213,
+      233,
+      30,
+      51
+    ]
+  },
+  {
+    "file": "src/layout/components/Navbar.vue",
+    "name": "",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [
+      "avatar",
+      "device",
+      "sidebar"
+    ],
+    "watch": [],
+    "methods": [
+      "logout",
+      "toggleSideBar"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      263
+    ]
+  },
+  {
+    "file": "src/components/Hamburger/index.vue",
+    "name": "Hamburger",
+    "props": [
+      "isActive"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [],
+    "watch": [],
+    "methods": [
+      "toggleClick"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [
+      "id"
+    ],
+    "listeners": [
+      "toggleClick"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      264
+    ]
+  },
+  {
+    "file": "src/components/Breadcrumb/index.vue",
+    "name": "",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "levelList"
     ],
     "computed": [],
     "watch": [
       "$route"
     ],
     "methods": [
-      "checkCapslock",
-      "showPwd",
-      "handleLogin",
-      "getOtherQuery"
+      "getBreadcrumb",
+      "handleLink",
+      "isDashboard",
+      "pathCompile"
     ],
     "mixins": [],
-    "uid": 4
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [
+      "id"
+    ],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      265
+    ]
+  },
+  {
+    "file": "packages/breadcrumb/src/breadcrumb.vue",
+    "name": "ElBreadcrumb",
+    "props": [
+      "separator",
+      "separatorClass"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [
+      "(function)",
+      "elBreadcrumb"
+    ],
+    "data": [],
+    "computed": [],
+    "watch": [],
+    "methods": [],
+    "mixins": [],
+    "refs": [],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      266
+    ]
+  },
+  {
+    "file": "packages/breadcrumb/src/breadcrumb-item.vue",
+    "name": "ElBreadcrumbItem",
+    "props": [
+      "replace",
+      "to"
+    ],
+    "emits": [],
+    "inject": [
+      "elBreadcrumb"
+    ],
+    "provide": [],
+    "data": [
+      "separator",
+      "separatorClass"
+    ],
+    "computed": [],
+    "watch": [],
+    "methods": [],
+    "mixins": [],
+    "refs": [
+      "link"
+    ],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      268,
+      269,
+      270,
+      333,
+      371,
+      379,
+      388,
+      410,
+      421,
+      427,
+      428,
+      434,
+      460,
+      466,
+      467
+    ]
+  },
+  {
+    "file": "src/components/HeaderSearch/index.vue",
+    "name": "HeaderSearch",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "search",
+      "options",
+      "searchPool",
+      "show",
+      "fuse"
+    ],
+    "computed": [
+      "routes"
+    ],
+    "watch": [
+      "routes",
+      "searchPool",
+      "show"
+    ],
+    "methods": [
+      "click",
+      "close",
+      "change",
+      "initFuse",
+      "generateRoutes",
+      "querySearch"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [
+      "id"
+    ],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      271
+    ]
+  },
+  {
+    "file": "packages/select/src/select.vue",
+    "name": "ElSelect",
+    "props": [
+      "allowCreate",
+      "autoComplete",
+      "autocomplete",
+      "automaticDropdown",
+      "clearable",
+      "collapseTags",
+      "defaultFirstOption",
+      "disabled",
+      "filterMethod",
+      "filterable",
+      "id",
+      "loading",
+      "loadingText",
+      "multiple",
+      "multipleLimit",
+      "name",
+      "noDataText",
+      "noMatchText",
+      "placeholder",
+      "popperAppendToBody",
+      "popperClass",
+      "remote",
+      "remoteMethod",
+      "reserveKeyword",
+      "size",
+      "value",
+      "valueKey"
+    ],
+    "emits": [],
+    "inject": [
+      "elForm",
+      "elFormItem"
+    ],
+    "provide": [
+      "(function)",
+      "select"
+    ],
+    "data": [
+      "cachedOptions",
+      "cachedPlaceHolder",
+      "createdLabel",
+      "createdSelected",
+      "currentPlaceholder",
+      "filteredOptionsCount",
+      "hoverIndex",
+      "hoverOption",
+      "initialInputHeight",
+      "inputHovering",
+      "inputLength",
+      "inputWidth",
+      "isOnComposition",
+      "isSilentBlur",
+      "menuVisibleOnFocus",
+      "options",
+      "optionsCount",
+      "previousQuery",
+      "query",
+      "selected",
+      "selectedLabel",
+      "softFocus",
+      "visible"
+    ],
+    "computed": [
+      "_elFormItemSize",
+      "collapseTagSize",
+      "debounce",
+      "emptyText",
+      "iconClass",
+      "optionsAllDisabled",
+      "readonly",
+      "selectDisabled",
+      "selectSize",
+      "showClose",
+      "showNewOption"
+    ],
+    "watch": [
+      "hoverIndex",
+      "options",
+      "placeholder",
+      "selectDisabled",
+      "value",
+      "visible"
+    ],
+    "methods": [
+      "blur",
+      "broadcast",
+      "checkDefaultFirstOption",
+      "deletePrevTag",
+      "deleteSelected",
+      "deleteTag",
+      "dispatch",
+      "doDestroy",
+      "emitChange",
+      "focus",
+      "getOption",
+      "getValueIndex",
+      "getValueKey",
+      "handleBlur",
+      "handleClearClick",
+      "handleClose",
+      "handleComposition",
+      "handleFocus",
+      "handleMenuEnter",
+      "handleOptionSelect",
+      "handleQueryChange",
+      "handleResize",
+      "managePlaceholder",
+      "navigateOptions",
+      "onInputChange",
+      "onOptionDestroy",
+      "resetHoverIndex",
+      "resetInputHeight",
+      "resetInputState",
+      "resetInputWidth",
+      "scrollToOption",
+      "selectOption",
+      "setSelected",
+      "setSoftFocus",
+      "t",
+      "toggleLastOptionHitState",
+      "toggleMenu"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [
+      "popper",
+      "reference",
+      "scrollbar",
+      "tags"
+    ],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [
+      "change",
+      "input"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      273,
+      438
+    ]
+  },
+  {
+    "file": "packages/input/src/input.vue",
+    "name": "ElInput",
+    "props": [
+      "autoComplete",
+      "autocomplete",
+      "autosize",
+      "clearable",
+      "disabled",
+      "form",
+      "label",
+      "prefixIcon",
+      "readonly",
+      "resize",
+      "showPassword",
+      "showWordLimit",
+      "size",
+      "suffixIcon",
+      "tabindex",
+      "type",
+      "validateEvent",
+      "value"
+    ],
+    "emits": [],
+    "inject": [
+      "elForm",
+      "elFormItem"
+    ],
+    "provide": [],
+    "data": [
+      "focused",
+      "hovering",
+      "isComposing",
+      "passwordVisible",
+      "textareaCalcStyle"
+    ],
+    "computed": [
+      "_elFormItemSize",
+      "inputDisabled",
+      "inputExceed",
+      "inputSize",
+      "isWordLimitVisible",
+      "nativeInputValue",
+      "needStatusIcon",
+      "showClear",
+      "showPwdVisible",
+      "textLength",
+      "textareaStyle",
+      "upperLimit",
+      "validateIcon",
+      "validateState"
+    ],
+    "watch": [
+      "nativeInputValue",
+      "type",
+      "value"
+    ],
+    "methods": [
+      "blur",
+      "broadcast",
+      "calcIconOffset",
+      "clear",
+      "dispatch",
+      "focus",
+      "getInput",
+      "getMigratingConfig",
+      "getSuffixVisible",
+      "handleBlur",
+      "handleChange",
+      "handleCompositionEnd",
+      "handleCompositionStart",
+      "handleCompositionUpdate",
+      "handleFocus",
+      "handleInput",
+      "handlePasswordVisible",
+      "resizeTextarea",
+      "select",
+      "setNativeInputValue",
+      "updateIconOffset"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [
+      "input"
+    ],
+    "slots": [
+      "prefix",
+      "prepend",
+      "suffix"
+    ],
+    "scopedSlots": [
+      "prepend",
+      "suffix"
+    ],
+    "attrs": [
+      "id",
+      "name",
+      "placeholder"
+    ],
+    "listeners": [
+      "blur",
+      "change",
+      "focus",
+      "input"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      274,
+      323,
+      404,
+      406,
+      440
+    ]
+  },
+  {
+    "file": "packages/select/src/select-dropdown.vue",
+    "name": "ElSelectDropdown",
+    "props": [
+      "appendToBody",
+      "arrowOffset",
+      "boundariesPadding",
+      "offset",
+      "placement",
+      "popper",
+      "popperOptions",
+      "reference",
+      "transformOrigin",
+      "value",
+      "visibleArrow"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "currentPlacement",
+      "minWidth",
+      "showPopper"
+    ],
+    "computed": [
+      "popperClass"
+    ],
+    "watch": [
+      "$parent.inputWidth",
+      "showPopper",
+      "value"
+    ],
+    "methods": [
+      "appendArrow",
+      "createPopper",
+      "destroyPopper",
+      "doDestroy",
+      "resetTransformOrigin",
+      "updatePopper"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      276,
+      442
+    ]
+  },
+  {
+    "file": "src/components/ErrorLog/index.vue",
+    "name": "ErrorLog",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "dialogTableVisible"
+    ],
+    "computed": [
+      "errorLogs"
+    ],
+    "watch": [],
+    "methods": [
+      "clearAll"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      280
+    ]
+  },
+  {
+    "file": "src/components/Screenfull/index.vue",
+    "name": "Screenfull",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "isFullscreen"
+    ],
+    "computed": [],
+    "watch": [],
+    "methods": [
+      "click",
+      "change",
+      "init",
+      "destroy"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [
+      "id"
+    ],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      281
+    ]
+  },
+  {
+    "file": "src/components/SizeSelect/index.vue",
+    "name": "",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "sizeOptions"
+    ],
+    "computed": [
+      "size"
+    ],
+    "watch": [],
+    "methods": [
+      "handleSetSize",
+      "refreshView"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [
+      "id"
+    ],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      285
+    ]
+  },
+  {
+    "file": "packages/dropdown/src/dropdown.vue",
+    "name": "ElDropdown",
+    "props": [
+      "hideOnClick",
+      "hideTimeout",
+      "placement",
+      "showTimeout",
+      "size",
+      "splitButton",
+      "tabindex",
+      "trigger",
+      "type",
+      "visibleArrow"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [
+      "(function)",
+      "dropdown"
+    ],
+    "data": [
+      "dropdownElm",
+      "focusing",
+      "listId",
+      "menuItems",
+      "menuItemsArray",
+      "timeout",
+      "triggerElm",
+      "visible"
+    ],
+    "computed": [
+      "dropdownSize"
+    ],
+    "watch": [
+      "focusing",
+      "visible"
+    ],
+    "methods": [
+      "broadcast",
+      "dispatch",
+      "getMigratingConfig",
+      "handleClick",
+      "handleItemKeyDown",
+      "handleMenuItemClick",
+      "handleTriggerKeyDown",
+      "hide",
+      "initAria",
+      "initDomOperation",
+      "initEvent",
+      "removeTabindex",
+      "resetTabindex",
+      "show",
+      "triggerElmFocus"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [],
+    "slots": [
+      "default",
+      "dropdown"
+    ],
+    "scopedSlots": [
+      "default",
+      "dropdown"
+    ],
+    "attrs": [],
+    "listeners": [
+      "command"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      286,
+      294,
+      392,
+      400
+    ]
+  },
+  {
+    "file": "packages/dropdown/src/dropdown-menu.vue",
+    "name": "ElDropdownMenu",
+    "props": [
+      "appendToBody",
+      "arrowOffset",
+      "boundariesPadding",
+      "offset",
+      "placement",
+      "popper",
+      "popperOptions",
+      "reference",
+      "transformOrigin",
+      "value",
+      "visibleArrow"
+    ],
+    "emits": [],
+    "inject": [
+      "dropdown"
+    ],
+    "provide": [],
+    "data": [
+      "currentPlacement",
+      "showPopper",
+      "size"
+    ],
+    "computed": [],
+    "watch": [
+      "dropdown.placement",
+      "showPopper",
+      "value"
+    ],
+    "methods": [
+      "appendArrow",
+      "createPopper",
+      "destroyPopper",
+      "doDestroy",
+      "resetTransformOrigin",
+      "updatePopper"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      288,
+      295,
+      394,
+      402
+    ]
+  },
+  {
+    "file": "packages/dropdown/src/dropdown-item.vue",
+    "name": "ElDropdownItem",
+    "props": [
+      "command",
+      "disabled",
+      "divided",
+      "icon"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [],
+    "watch": [],
+    "methods": [
+      "broadcast",
+      "dispatch",
+      "handleClick"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      290,
+      291,
+      292,
+      293,
+      298,
+      300,
+      301,
+      302,
+      303
+    ]
+  },
+  {
+    "file": "src/layout/components/TagsView/index.vue",
+    "name": "",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "affixTags",
+      "left",
+      "selectedTag",
+      "top",
+      "visible"
+    ],
+    "computed": [
+      "routes",
+      "visitedViews"
+    ],
+    "watch": [
+      "$route",
+      "visible"
+    ],
+    "methods": [
+      "addTags",
+      "closeAllTags",
+      "closeMenu",
+      "closeOthersTags",
+      "closeSelectedTag",
+      "filterAffixTags",
+      "handleScroll",
+      "initTags",
+      "isActive",
+      "isAffix",
+      "moveToCurrentTag",
+      "openMenu",
+      "refreshSelectedTag",
+      "toLastView"
+    ],
+    "mixins": [],
+    "refs": [
+      "scrollPane",
+      "tag"
+    ],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      304
+    ]
+  },
+  {
+    "file": "src/layout/components/TagsView/ScrollPane.vue",
+    "name": "ScrollPane",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "left"
+    ],
+    "computed": [
+      "scrollWrapper"
+    ],
+    "watch": [],
+    "methods": [
+      "emitScroll",
+      "handleScroll",
+      "moveToTarget"
+    ],
+    "mixins": [],
+    "refs": [
+      "scrollContainer"
+    ],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [
+      "scroll"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      305
+    ]
+  },
+  {
+    "file": "src/layout/components/AppMain.vue",
+    "name": "AppMain",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [
+      "cachedViews",
+      "key"
+    ],
+    "watch": [],
+    "methods": [],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      309
+    ]
+  },
+  {
+    "file": "src/views/components-demo/count-to.vue",
+    "name": "CountToDemo",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "setDecimals",
+      "setDuration",
+      "setEndVal",
+      "setPrefix",
+      "setSeparator",
+      "setStartVal",
+      "setSuffix"
+    ],
+    "computed": [
+      "_decimals",
+      "_duration",
+      "_endVal",
+      "_prefix",
+      "_separator",
+      "_startVal",
+      "_suffix"
+    ],
+    "watch": [],
+    "methods": [
+      "pauseResume",
+      "start"
+    ],
+    "mixins": [],
+    "refs": [
+      "example"
+    ],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      312
+    ]
+  },
+  {
+    "file": "src/components/RightPanel/index.vue",
+    "name": "RightPanel",
+    "props": [
+      "buttonTop",
+      "clickNotClose"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "show"
+    ],
+    "computed": [
+      "theme"
+    ],
+    "watch": [
+      "show"
+    ],
+    "methods": [
+      "addEventClick",
+      "closeSidebar",
+      "insertToBody"
+    ],
+    "mixins": [],
+    "refs": [
+      "rightPanel"
+    ],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      314
+    ]
+  },
+  {
+    "file": "src/layout/components/Settings/index.vue",
+    "name": "",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [
+      "fixedHeader",
+      "tagsView",
+      "sidebarLogo"
+    ],
+    "watch": [],
+    "methods": [
+      "themeChange"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      315
+    ]
+  },
+  {
+    "file": "src/components/ThemePicker/index.vue",
+    "name": "",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "chalk",
+      "theme"
+    ],
+    "computed": [
+      "defaultTheme"
+    ],
+    "watch": [
+      "defaultTheme",
+      "theme"
+    ],
+    "methods": [
+      "updateStyle",
+      "getCSSString",
+      "getThemeCluster"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [
+      "change"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      316
+    ]
+  },
+  {
+    "file": "packages/color-picker/src/main.vue",
+    "name": "ElColorPicker",
+    "props": [
+      "colorFormat",
+      "disabled",
+      "popperClass",
+      "predefine",
+      "showAlpha",
+      "size",
+      "value"
+    ],
+    "emits": [],
+    "inject": [
+      "elForm",
+      "elFormItem"
+    ],
+    "provide": [],
+    "data": [
+      "color",
+      "showPanelColor",
+      "showPicker"
+    ],
+    "computed": [
+      "_elFormItemSize",
+      "colorDisabled",
+      "colorSize",
+      "displayedColor"
+    ],
+    "watch": [
+      "color",
+      "displayedColor",
+      "value"
+    ],
+    "methods": [
+      "broadcast",
+      "clearValue",
+      "confirmValue",
+      "dispatch",
+      "displayedRgb",
+      "handleTrigger",
+      "hide",
+      "resetColor"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [
+      "dropdown"
+    ],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [
+      "input"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      317
+    ]
+  },
+  {
+    "file": "packages/color-picker/src/components/picker-dropdown.vue",
+    "name": "el-color-picker-dropdown",
+    "props": [
+      "appendToBody",
+      "arrowOffset",
+      "boundariesPadding",
+      "color",
+      "offset",
+      "placement",
+      "popper",
+      "popperOptions",
+      "predefine",
+      "reference",
+      "showAlpha",
+      "transformOrigin",
+      "value",
+      "visibleArrow"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "currentPlacement",
+      "customInput",
+      "showPopper"
+    ],
+    "computed": [
+      "currentColor"
+    ],
+    "watch": [
+      "currentColor",
+      "showPopper",
+      "value"
+    ],
+    "methods": [
+      "appendArrow",
+      "confirmValue",
+      "createPopper",
+      "destroyPopper",
+      "doDestroy",
+      "handleConfirm",
+      "resetTransformOrigin",
+      "t",
+      "updatePopper"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [
+      "hue",
+      "sl"
+    ],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [
+      "clear",
+      "input",
+      "pick"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      318
+    ]
+  },
+  {
+    "file": "packages/color-picker/src/components/hue-slider.vue",
+    "name": "el-color-hue-slider",
+    "props": [
+      "color",
+      "vertical"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "thumbLeft",
+      "thumbTop"
+    ],
+    "computed": [
+      "hueValue"
+    ],
+    "watch": [
+      "hueValue"
+    ],
+    "methods": [
+      "handleClick",
+      "handleDrag",
+      "getThumbLeft",
+      "getThumbTop",
+      "update"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      320
+    ]
+  },
+  {
+    "file": "packages/color-picker/src/components/sv-panel.vue",
+    "name": "el-sl-panel",
+    "props": [
+      "color"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "background",
+      "cursorLeft",
+      "cursorTop"
+    ],
+    "computed": [
+      "colorValue"
+    ],
+    "watch": [
+      "colorValue"
+    ],
+    "methods": [
+      "handleDrag",
+      "update"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      321
+    ]
+  },
+  {
+    "file": "packages/color-picker/src/components/predefine.vue",
+    "name": "",
+    "props": [
+      "color",
+      "colors"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "rgbaColors"
+    ],
+    "computed": [],
+    "watch": [
+      "$parent.currentColor",
+      "color",
+      "colors"
+    ],
+    "methods": [
+      "handleSelect",
+      "parseColors"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      322
+    ]
+  },
+  {
+    "file": "packages/button/src/button.vue",
+    "name": "ElButton",
+    "props": [
+      "autofocus",
+      "circle",
+      "disabled",
+      "icon",
+      "loading",
+      "nativeType",
+      "plain",
+      "round",
+      "size",
+      "type"
+    ],
+    "emits": [],
+    "inject": [
+      "elForm",
+      "elFormItem"
+    ],
+    "provide": [],
+    "data": [],
+    "computed": [
+      "_elFormItemSize",
+      "buttonDisabled",
+      "buttonSize"
+    ],
+    "watch": [],
+    "methods": [
+      "handleClick"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [
+      "click"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      324,
+      325,
+      363,
+      393,
+      401,
+      407,
+      409,
+      425,
+      431
+    ]
+  },
+  {
+    "file": "packages/switch/src/component.vue",
+    "name": "ElSwitch",
+    "props": [
+      "activeColor",
+      "activeIconClass",
+      "activeText",
+      "activeValue",
+      "disabled",
+      "id",
+      "inactiveColor",
+      "inactiveIconClass",
+      "inactiveText",
+      "inactiveValue",
+      "name",
+      "validateEvent",
+      "value",
+      "width"
+    ],
+    "emits": [],
+    "inject": [
+      "elForm"
+    ],
+    "provide": [],
+    "data": [
+      "coreWidth"
+    ],
+    "computed": [
+      "checked",
+      "switchDisabled"
+    ],
+    "watch": [
+      "checked"
+    ],
+    "methods": [
+      "broadcast",
+      "dispatch",
+      "focus",
+      "getMigratingConfig",
+      "handleChange",
+      "setBackgroundColor",
+      "switchValue"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [
+      "input"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      326,
+      327,
+      328
+    ]
+  },
+  {
+    "file": "src/views/components-demo/mixin.vue",
+    "name": "ComponentMixinDemo",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "articleList",
+      "demo",
+      "demoRules"
+    ],
+    "computed": [],
+    "watch": [],
+    "methods": [],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      335
+    ]
+  },
+  {
+    "file": "packages/card/src/main.vue",
+    "name": "ElCard",
+    "props": [
+      "bodyStyle",
+      "header",
+      "shadow"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [],
+    "watch": [],
+    "methods": [],
+    "mixins": [],
+    "refs": [],
+    "slots": [
+      "default",
+      "header"
+    ],
+    "scopedSlots": [
+      "default",
+      "header"
+    ],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      337,
+      352,
+      359,
+      362,
+      365,
+      369
+    ]
+  },
+  {
+    "file": "packages/form/src/form.vue",
+    "name": "ElForm",
+    "props": [
+      "disabled",
+      "hideRequiredAsterisk",
+      "inline",
+      "inlineMessage",
+      "labelPosition",
+      "labelSuffix",
+      "labelWidth",
+      "model",
+      "rules",
+      "showMessage",
+      "size",
+      "statusIcon",
+      "validateOnRuleChange"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [
+      "(function)",
+      "elForm"
+    ],
+    "data": [
+      "fields",
+      "potentialLabelWidthArr"
+    ],
+    "computed": [
+      "autoLabelWidth"
+    ],
+    "watch": [
+      "rules"
+    ],
+    "methods": [
+      "clearValidate",
+      "deregisterLabelWidth",
+      "getLabelWidthIndex",
+      "registerLabelWidth",
+      "resetFields",
+      "validate",
+      "validateField"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      353
+    ]
+  },
+  {
+    "file": "packages/form/src/form-item.vue",
+    "name": "ElFormItem",
+    "props": [
+      "error",
+      "for",
+      "inlineMessage",
+      "label",
+      "labelWidth",
+      "prop",
+      "required",
+      "rules",
+      "showMessage",
+      "size",
+      "validateStatus"
+    ],
+    "emits": [],
+    "inject": [
+      "elForm"
+    ],
+    "provide": [
+      "(function)",
+      "elFormItem"
+    ],
+    "data": [
+      "computedLabelWidth",
+      "isNested",
+      "validateDisabled",
+      "validateMessage",
+      "validateState",
+      "validator"
+    ],
+    "computed": [
+      "_formSize",
+      "contentStyle",
+      "elFormItemSize",
+      "fieldValue",
+      "form",
+      "isRequired",
+      "labelFor",
+      "labelStyle",
+      "sizeClass"
+    ],
+    "watch": [
+      "error",
+      "validateStatus"
+    ],
+    "methods": [
+      "addValidateEvents",
+      "broadcast",
+      "clearValidate",
+      "dispatch",
+      "getFilteredRule",
+      "getRules",
+      "onFieldBlur",
+      "onFieldChange",
+      "removeValidateEvents",
+      "resetField",
+      "updateComputedLabelWidth",
+      "validate"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      354
+    ]
+  },
+  {
+    "file": "packages/form/src/label-wrap.vue",
+    "name": "",
+    "props": [
+      "isAutoWidth",
+      "updateAll"
+    ],
+    "emits": [],
+    "inject": [
+      "elForm",
+      "elFormItem"
+    ],
+    "provide": [],
+    "data": [
+      "computedWidth"
+    ],
+    "computed": [],
+    "watch": [
+      "computedWidth"
+    ],
+    "methods": [
+      "getLabelWidth",
+      "updateLabelWidth"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      355
+    ]
+  },
+  {
+    "file": "src/components/MDinput/index.vue",
+    "name": "MdInput",
+    "props": [
+      "autoComplete",
+      "disabled",
+      "icon",
+      "max",
+      "maxlength",
+      "min",
+      "minlength",
+      "name",
+      "placeholder",
+      "readonly",
+      "required",
+      "step",
+      "type",
+      "validateEvent",
+      "value"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "currentValue",
+      "fillPlaceHolder",
+      "focus"
+    ],
+    "computed": [
+      "computedClasses"
+    ],
+    "watch": [
+      "value"
+    ],
+    "methods": [
+      "handleMdBlur",
+      "handleMdFocus",
+      "handleModelInput"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [
+      "input"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      356
+    ]
+  },
+  {
+    "file": "src/components/PanThumb/index.vue",
+    "name": "PanThumb",
+    "props": [
+      "height",
+      "image",
+      "width",
+      "zIndex"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [],
+    "watch": [],
+    "methods": [],
+    "mixins": [],
+    "refs": [],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      360,
+      424
+    ]
+  },
+  {
+    "file": "src/components/TextHoverEffect/Mallki.vue",
+    "name": "",
+    "props": [
+      "className",
+      "text"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [],
+    "watch": [],
+    "methods": [],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      366
+    ]
+  },
+  {
+    "file": "src/components/Share/DropdownMenu.vue",
+    "name": "",
+    "props": [
+      "items",
+      "title"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "isActive"
+    ],
+    "computed": [],
+    "watch": [],
+    "methods": [
+      "clickTitle"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      370
+    ]
+  },
+  {
+    "file": "src/views/components-demo/back-to-top.vue",
+    "name": "BackToTopDemo",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "myBackToTopStyle"
+    ],
+    "computed": [],
+    "watch": [],
+    "methods": [],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      373
+    ]
+  },
+  {
+    "file": "src/components/BackToTop/index.vue",
+    "name": "BackToTop",
+    "props": [
+      "backPosition",
+      "customStyle",
+      "transitionName",
+      "visibilityHeight"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "interval",
+      "isMoving",
+      "visible"
+    ],
+    "computed": [],
+    "watch": [],
+    "methods": [
+      "backToTop",
+      "easeInOutQuad",
+      "handleScroll"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      376
+    ]
+  },
+  {
+    "file": "src/views/components-demo/drag-kanban.vue",
+    "name": "DragKanbanDemo",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "group",
+      "list1",
+      "list2",
+      "list3"
+    ],
+    "computed": [],
+    "watch": [],
+    "methods": [],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      381
+    ]
+  },
+  {
+    "file": "src/components/Kanban/index.vue",
+    "name": "DragKanbanDemo",
+    "props": [
+      "headerText",
+      "list",
+      "options"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [],
+    "watch": [],
+    "methods": [
+      "setData"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [
+      "group"
+    ],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      382,
+      384,
+      386
+    ]
+  },
+  {
+    "file": "src/views/components-demo/sticky.vue",
+    "name": "StickyDemo",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "pickerOptions",
+      "platforms",
+      "platformsOptions",
+      "time",
+      "url"
+    ],
+    "computed": [],
+    "watch": [],
+    "methods": [],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      390
+    ]
+  },
+  {
+    "file": "src/components/Sticky/index.vue",
+    "name": "Sticky",
+    "props": [
+      "className",
+      "stickyTop",
+      "zIndex"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "active",
+      "height",
+      "isSticky",
+      "position",
+      "width"
+    ],
+    "computed": [],
+    "watch": [],
+    "methods": [
+      "handleReset",
+      "handleResize",
+      "handleScroll",
+      "reset",
+      "sticky"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      391,
+      408
+    ]
+  },
+  {
+    "file": "packages/checkbox/src/checkbox-group.vue",
+    "name": "ElCheckboxGroup",
+    "props": [
+      "disabled",
+      "fill",
+      "max",
+      "min",
+      "size",
+      "textColor",
+      "value"
+    ],
+    "emits": [],
+    "inject": [
+      "elFormItem"
+    ],
+    "provide": [],
+    "data": [],
+    "computed": [
+      "_elFormItemSize",
+      "checkboxGroupSize"
+    ],
+    "watch": [
+      "value"
+    ],
+    "methods": [
+      "broadcast",
+      "dispatch"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [
+      "input"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      396
+    ]
+  },
+  {
+    "file": "packages/checkbox/src/checkbox.vue",
+    "name": "ElCheckbox",
+    "props": [
+      "border",
+      "checked",
+      "controls",
+      "disabled",
+      "falseLabel",
+      "id",
+      "indeterminate",
+      "label",
+      "name",
+      "size",
+      "trueLabel",
+      "value"
+    ],
+    "emits": [],
+    "inject": [
+      "elForm",
+      "elFormItem"
+    ],
+    "provide": [],
+    "data": [
+      "focus",
+      "isLimitExceeded",
+      "selfModel"
+    ],
+    "computed": [
+      "_elFormItemSize",
+      "checkboxSize",
+      "isChecked",
+      "isDisabled",
+      "isGroup",
+      "isLimitDisabled",
+      "model",
+      "store"
+    ],
+    "watch": [
+      "value"
+    ],
+    "methods": [
+      "addToStore",
+      "broadcast",
+      "dispatch",
+      "handleChange"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      397,
+      398,
+      399
+    ]
+  },
+  {
+    "file": "packages/date-picker/src/picker.vue",
+    "name": "ElDatePicker",
+    "props": [
+      "appendToBody",
+      "offset",
+      "boundariesPadding",
+      "arrowOffset",
+      "size",
+      "format",
+      "valueFormat",
+      "readonly",
+      "placeholder",
+      "startPlaceholder",
+      "endPlaceholder",
+      "prefixIcon",
+      "clearIcon",
+      "name",
+      "disabled",
+      "clearable",
+      "id",
+      "popperClass",
+      "editable",
+      "align",
+      "value",
+      "defaultValue",
+      "defaultTime",
+      "rangeSeparator",
+      "pickerOptions",
+      "unlinkPanels",
+      "validateEvent",
+      "type",
+      "timeArrowControl"
+    ],
+    "emits": [],
+    "inject": [
+      "elForm",
+      "elFormItem"
+    ],
+    "provide": [],
+    "data": [
+      "pickerVisible",
+      "showClose",
+      "userInput",
+      "valueOnOpen",
+      "unwatchPickerOptions",
+      "visibleArrow"
+    ],
+    "computed": [
+      "ranged",
+      "reference",
+      "refInput",
+      "valueIsEmpty",
+      "triggerClass",
+      "selectionMode",
+      "haveTrigger",
+      "displayValue",
+      "parsedValue",
+      "_elFormItemSize",
+      "pickerSize",
+      "pickerDisabled",
+      "firstInputId",
+      "secondInputId"
+    ],
+    "watch": [
+      "pickerVisible",
+      "parsedValue",
+      "defaultValue",
+      "value",
+      "type"
+    ],
+    "methods": [
+      "dispatch",
+      "broadcast",
+      "createPopper",
+      "updatePopper",
+      "doDestroy",
+      "destroyPopper",
+      "resetTransformOrigin",
+      "appendArrow",
+      "focus",
+      "blur",
+      "parseValue",
+      "formatToValue",
+      "parseString",
+      "formatToString",
+      "handleMouseEnter",
+      "handleChange",
+      "handleStartInput",
+      "handleEndInput",
+      "handleStartChange",
+      "handleEndChange",
+      "handleClickIcon",
+      "handleClose",
+      "handleFieldReset",
+      "handleFocus",
+      "handleKeydown",
+      "handleRangeClick",
+      "hidePicker",
+      "showPicker",
+      "mountPicker",
+      "unmountPicker",
+      "emitChange",
+      "emitInput",
+      "isValidValue"
+    ],
+    "mixins": [
+      "packages/date-picker/src/picker.vue"
+    ],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [
+      "input"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      405
+    ]
+  },
+  {
+    "file": "src/views/components-demo/split-pane.vue",
+    "name": "SplitpaneDemo",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [],
+    "watch": [],
+    "methods": [
+      "resize"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      412
+    ]
+  },
+  {
+    "file": "src/views/components-demo/avatar-upload.vue",
+    "name": "AvatarUploadDemo",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "image",
+      "imagecropperKey",
+      "imagecropperShow"
+    ],
+    "computed": [],
+    "watch": [],
+    "methods": [
+      "close",
+      "cropSuccess"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      423
+    ]
+  },
+  {
+    "file": "src/components/ImageCropper/index.vue",
+    "name": "",
+    "props": [
+      "field",
+      "ki",
+      "value",
+      "url",
+      "params",
+      "headers",
+      "width",
+      "height",
+      "noRotate",
+      "noCircle",
+      "noSquare",
+      "maxSize",
+      "langType",
+      "langExt",
+      "imgFormat",
+      "withCredentials"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "mime",
+      "lang",
+      "isSupported",
+      "isSupportTouch",
+      "step",
+      "loading",
+      "progress",
+      "hasError",
+      "errorMsg",
+      "ratio",
+      "sourceImg",
+      "sourceImgUrl",
+      "createImgUrl",
+      "sourceImgMouseDown",
+      "previewContainer",
+      "sourceImgContainer",
+      "scale"
+    ],
+    "computed": [
+      "progressStyle",
+      "sourceImgStyle",
+      "sourceImgMasking",
+      "sourceImgShadeStyle",
+      "previewStyle"
+    ],
+    "watch": [
+      "value"
+    ],
+    "methods": [
+      "ripple",
+      "off",
+      "setStep",
+      "preventDefault",
+      "handleClick",
+      "handleChange",
+      "checkFile",
+      "reset",
+      "setSourceImg",
+      "startCrop",
+      "imgStartMove",
+      "imgMove",
+      "startRotateRight",
+      "startRotateLeft",
+      "endRotate",
+      "startZoomAdd",
+      "endZoomAdd",
+      "startZoomSub",
+      "endZoomSub",
+      "zoomChange",
+      "zoomImg",
+      "createImg",
+      "prepareUpload",
+      "upload",
+      "closeHandler"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [
+      "close",
+      "crop-upload-success"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      426
+    ]
+  },
+  {
+    "file": "src/views/components-demo/drag-dialog.vue",
+    "name": "DragDialogDemo",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "dialogTableVisible",
+      "options",
+      "value",
+      "gridData"
+    ],
+    "computed": [],
+    "watch": [],
+    "methods": [
+      "handleDrag"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      430
+    ]
+  },
+  {
+    "file": "packages/dialog/src/component.vue",
+    "name": "ElDialog",
+    "props": [
+      "visible",
+      "openDelay",
+      "closeDelay",
+      "zIndex",
+      "modal",
+      "modalFade",
+      "modalClass",
+      "modalAppendToBody",
+      "lockScroll",
+      "closeOnPressEscape",
+      "closeOnClickModal",
+      "title",
+      "appendToBody",
+      "showClose",
+      "width",
+      "fullscreen",
+      "customClass",
+      "top",
+      "beforeClose",
+      "center",
+      "destroyOnClose"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "closed",
+      "key",
+      "opened",
+      "bodyPaddingRight",
+      "computedBodyPaddingRight",
+      "withoutHiddenClass",
+      "rendered"
+    ],
+    "computed": [
+      "style"
+    ],
+    "watch": [
+      "visible"
+    ],
+    "methods": [
+      "open",
+      "doOpen",
+      "doAfterOpen",
+      "close",
+      "doClose",
+      "doAfterClose",
+      "restoreBodyStyle",
+      "dispatch",
+      "broadcast",
+      "getMigratingConfig",
+      "handleWrapperClick",
+      "handleClose",
+      "hide",
+      "updatePopper",
+      "afterEnter",
+      "afterLeave"
+    ],
+    "mixins": [
+      "(anonymous)",
+      "(anonymous)",
+      "(anonymous)"
+    ],
+    "refs": [],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [
+      "update:visible",
+      "dragDialog"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      432
+    ]
+  },
+  {
+    "file": "src/views/components-demo/drag-select.vue",
+    "name": "DragSelectDemo",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "options",
+      "value"
+    ],
+    "computed": [],
+    "watch": [],
+    "methods": [],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      436
+    ]
+  },
+  {
+    "file": "src/components/DragSelect/index.vue",
+    "name": "DragSelect",
+    "props": [
+      "value"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [
+      "selectVal"
+    ],
+    "watch": [],
+    "methods": [
+      "setSort"
+    ],
+    "mixins": [],
+    "refs": [
+      "dragSelect"
+    ],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [
+      "multiple",
+      "placeholder"
+    ],
+    "listeners": [
+      "input"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      437
+    ]
+  },
+  {
+    "file": "packages/select/src/option.vue",
+    "name": "ElOption",
+    "props": [
+      "created",
+      "disabled",
+      "label",
+      "value"
+    ],
+    "emits": [],
+    "inject": [
+      "select"
+    ],
+    "provide": [],
+    "data": [
+      "groupDisabled",
+      "hitState",
+      "hover",
+      "index",
+      "visible"
+    ],
+    "computed": [
+      "currentLabel",
+      "currentValue",
+      "isObject",
+      "itemSelected",
+      "limitReached"
+    ],
+    "watch": [
+      "currentLabel",
+      "value"
+    ],
+    "methods": [
+      "broadcast",
+      "contains",
+      "dispatch",
+      "handleGroupDisabled",
+      "hoverItem",
+      "isEqual",
+      "queryChange",
+      "selectOptionClick"
+    ],
+    "mixins": [
+      "(anonymous)"
+    ],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      444,
+      445,
+      446,
+      447,
+      448
+    ]
+  },
+  {
+    "file": "packages/tag/src/tag.vue",
+    "name": "ElTag",
+    "props": [
+      "closable",
+      "color",
+      "disableTransitions",
+      "effect",
+      "hit",
+      "size",
+      "text",
+      "type"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [
+      "tagSize"
+    ],
+    "watch": [],
+    "methods": [
+      "handleClick",
+      "handleClose"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [
+      "default"
+    ],
+    "scopedSlots": [
+      "default"
+    ],
+    "attrs": [],
+    "listeners": [
+      "close"
+    ],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      451,
+      453,
+      455,
+      457,
+      458,
+      459
+    ]
+  },
+  {
+    "file": "src/views/components-demo/dnd-list.vue",
+    "name": "DndListDemo",
+    "props": [],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [
+      "list1",
+      "list2"
+    ],
+    "computed": [],
+    "watch": [],
+    "methods": [
+      "getData"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      462
+    ]
+  },
+  {
+    "file": "src/components/DndList/index.vue",
+    "name": "DndList",
+    "props": [
+      "list1",
+      "list1Title",
+      "list2",
+      "list2Title",
+      "width1",
+      "width2"
+    ],
+    "emits": [],
+    "inject": [],
+    "provide": [],
+    "data": [],
+    "computed": [],
+    "watch": [],
+    "methods": [
+      "deleteEle",
+      "isNotInList1",
+      "isNotInList2",
+      "pushEle",
+      "setData"
+    ],
+    "mixins": [],
+    "refs": [],
+    "slots": [],
+    "scopedSlots": [],
+    "attrs": [],
+    "listeners": [],
+    "pluginProperties": [
+      "$ELEMENT",
+      "$alert",
+      "$confirm",
+      "$delete",
+      "$destroy",
+      "$emit",
+      "$forceUpdate",
+      "$loading",
+      "$message",
+      "$mount",
+      "$msgbox",
+      "$nextTick",
+      "$notify",
+      "$off",
+      "$on",
+      "$once",
+      "$prompt",
+      "$set",
+      "$store",
+      "$watch"
+    ],
+    "uids": [
+      463
+    ]
   }
 ]

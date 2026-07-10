@@ -5,6 +5,11 @@
  *
  * 适配 Vue CLI 4 (webpack 4 + webpack-dev-server v3)
  *
+ * 核心改动：hook finishModules 而非 compiler.done
+ * finishModules 阶段所有模块已构建、scope hoisting 尚未发生，
+ * compilation.modules 里每个文件都是独立 NormalModule，
+ * 不会出现 "file.vue + N modules" 的合并。
+ *
  * vue.config.js 用法：
  *   const DepExtractorPlugin = require('./autorefactor/DepExtractorPlugin')
  *
@@ -19,163 +24,148 @@
 const fs   = require('fs')
 const path = require('path')
 
-// 输出到 react-app-webpack 那边的 vue-admin/ast 目录
 const OUTPUT_DIR = path.resolve(__dirname, 'ast')
+
+function normPath(p) { return p.replace(/\\/g, '/') }
 
 class DepExtractorPlugin {
   constructor(options) {
     options = options || {}
-    this.srcFilter  = options.srcFilter  || path.resolve(__dirname, '../src')
-    this.outputDir  = options.outputDir  || OUTPUT_DIR
-    // 只抓我们关心的组件范围（节省噪音）
-    // focusPaths 已移除：统一只收录 src/ 下所有文件，无需手动维护列表
+    this.srcFilter  = options.srcFilter || options.srcDir || path.resolve(__dirname, '../src')
+    this.outputDir  = options.outputDir || options.outDir || OUTPUT_DIR
   }
 
   apply(compiler) {
-    // entry 注入已改为 vue.config.js chainWebpack.entry('app').prepend(...)
-    // ── 编译完成：提取依赖图 + sourcemap 索引 ────────────────────────────────
-    compiler.hooks.done.tap('DepExtractorPlugin', (stats) => {
-      // 只在生产构建时收集：dev server 懒加载会导致动态 import 的 chunk 不完整
-      const isProduction = compiler.options.mode === 'production' || !compiler.watchMode
-      if (!isProduction) {
-        console.log('\n[DepExtractor] dev 模式跳过，请用 npm run build 收集完整依赖图')
-        return
-      }
-      console.log('\n[DepExtractor] 开始提取依赖图...')
+    const self = this
 
-      const json = stats.toJson({
-        modules: true,
-        reasons: true,
-        source:  false,
-        chunks:  false,
-        assets:  false,
-      })
+    compiler.hooks.compilation.tap('DepExtractorPlugin', (compilation) => {
+      // finishModules: 所有模块构建完毕，scope hoisting / tree shaking 尚未发生
+      // 只在生产构建（npm run build）时写入，dev server 懒加载会导致每次编译模块列表不同
+      compilation.hooks.finishModules.tap('DepExtractorPlugin', () => {
+        const isProd = compiler.options.mode === 'production' || !compiler.watchMode
+        if (!isProd) return
 
-      const depGraph   = {}
-      const reverseMap = {}
-
-      // webpack 4: mod.name = './src/layout/index.vue?vue&type=script...'（相对路径，带query）
-      // webpack 5: mod.nameForCondition = 绝对路径
-      const modToAbsFile = (mod) => {
-        // webpack 5
-        if (mod.nameForCondition) return mod.nameForCondition
-        // webpack 4: name 可能是 './src/xxx.vue' 或带 loader 前缀的 identifier
-        let name = mod.name || mod.identifier || ''
-        // 去掉 loader 链前缀（最后一个 ! 之后才是文件路径）
-        if (name.includes('!')) name = name.split('!').pop()
-        // 去掉 vue-loader query（?vue&type=script&lang=js 等）
-        name = name.split('?')[0]
-        if (!name) return null
-        const abs = path.isAbsolute(name) ? name : path.resolve(compiler.context, name)
-        return abs
-      }
-
-      const isSrcFile = (absPath) => {
-        if (!absPath) return false
-        return absPath.startsWith(this.srcFilter) && !absPath.includes('node_modules')
-      }
-
-      // focusPaths 已废弃：src/ 下全部文件都纳入，node_modules 由 isSrcFile 排除
-      const isInFocus = (absPath) => isSrcFile(absPath)
-
-      // identifier → absFile 反查表（含 webpack 4 的带query identifier）
-      const identToFile = {}
-      ;(json.modules || []).forEach(mod => {
-        const abs = modToAbsFile(mod)
-        if (!abs || !isSrcFile(abs)) return
-        // 把 mod.identifier（带 loader/query）映射到干净的 absFile
-        if (mod.identifier) identToFile[mod.identifier] = abs
-        if (mod.id != null)  identToFile[String(mod.id)] = abs
-      })
-
-      const resolveIdent = (ident) => {
-        if (!ident) return null
-        if (identToFile[ident]) return identToFile[ident]
-        // 降级：剥 loader + query
-        let name = ident
-        if (name.includes('!')) name = name.split('!').pop()
-        name = name.split('?')[0]
-        const abs = path.isAbsolute(name) ? name : path.resolve(compiler.context, name)
-        return isSrcFile(abs) ? abs : null
-      }
-
-      ;(json.modules || []).forEach((mod) => {
-        const file = modToAbsFile(mod)
-        if (!isSrcFile(file)) return
-
-        if (!depGraph[file])   depGraph[file]   = []
-        if (!reverseMap[file]) reverseMap[file] = []
-
-        const importers = (mod.reasons || [])
-          // webpack 4: r.moduleIdentifier; webpack 5: r.resolvedModuleIdentifier
-          .map(r => resolveIdent(r.resolvedModuleIdentifier || r.moduleIdentifier))
-          .filter(f => f && isSrcFile(f) && f !== file)
-
-        importers.forEach(parent => {
-          if (!reverseMap[file].includes(parent)) reverseMap[file].push(parent)
-          if (!depGraph[parent]) depGraph[parent] = []
-          if (!depGraph[parent].includes(file))   depGraph[parent].push(file)
-        })
-      })
-
-      // 只保留 focusPaths 范围内的节点
-      const focusGraph = {}
-      Object.keys(depGraph).forEach(file => {
-        if (isInFocus(file)) {
-          focusGraph[file] = depGraph[file].filter(isInFocus)
+        const isSrcFile = (absPath) => {
+          if (!absPath) return false
+          return absPath.startsWith(self.srcFilter) && !absPath.includes('node_modules')
         }
-      })
 
-      // sourcemap 收集
-      const outputPath = stats.compilation.outputOptions.path
-      const sourceMaps = {}
-      const smDestDir  = path.join(this.outputDir, 'sourcemaps')
-      fs.mkdirSync(smDestDir, { recursive: true })
+        const toSrcRelative = (absPath) => {
+          return 'src/' + normPath(path.relative(self.srcFilter, absPath))
+        }
 
-      try {
-        fs.readdirSync(outputPath)
-          .filter(f => f.endsWith('.map'))
-          .forEach(mapFile => {
-            const srcPath    = path.join(outputPath, mapFile)
-            const mapContent = JSON.parse(fs.readFileSync(srcPath, 'utf-8'))
-            const relSources = (mapContent.sources || []).filter(isInFocus)
-            if (relSources.length === 0) return
+        console.log('\n[DepExtractor] 开始提取依赖图 (finishModules, ' + compilation.modules.length + ' total modules)...')
 
-            const destPath = path.join(smDestDir, mapFile)
-            fs.copyFileSync(srcPath, destPath)
-            sourceMaps[mapFile] = { copiedTo: destPath, sources: relSources }
+        const depGraph   = {}
+
+        compilation.modules.forEach((mod) => {
+          // webpack 4: NormalModule 有 resource 属性；ConcatenatedModule / ExternalModule 等忽略
+          if (!mod.resource) return
+          const absFile = mod.resource
+          if (!isSrcFile(absFile)) return
+
+          if (!depGraph[absFile]) depGraph[absFile] = []
+
+          // 方法1：从 webpack 内部 dependency graph 提取
+          // HarmonyImportSideEffectDependency / HarmonyImportSpecifierDependency
+          ;(mod.dependencies || []).forEach((dep) => {
+            if (!dep.module || !dep.module.resource) return
+            const depFile = dep.module.resource
+            if (!isSrcFile(depFile) || depFile === absFile) return
+            if (!depGraph[absFile].includes(depFile)) {
+              depGraph[absFile].push(depFile)
+            }
+            // 确保依赖文件也在 graph 中（即使没有 import 别人）
+            if (!depGraph[depFile]) depGraph[depFile] = []
           })
-      } catch (e) {
-        console.warn('[DepExtractor] 读取 sourcemap 失败:', e.message)
-      }
 
-      fs.mkdirSync(this.outputDir, { recursive: true })
+          // 方法2：静态分析补漏
+          // require() / 动态 import / webpack 无法静态追踪的依赖靠源码正则
+          let source = ''
+          try { source = fs.readFileSync(absFile, 'utf-8') } catch (e) {}
+          if (!source) return
 
-      const depGraphPath = path.join(this.outputDir, 'dep-graph.json')
-      fs.writeFileSync(depGraphPath, JSON.stringify({
-        meta: {
-          generatedAt: new Date().toISOString(),
-          srcRoot:     this.srcFilter,
-          focusPaths:  this.focusPaths,
-        },
-        graph:   focusGraph,
-        reverse: reverseMap,
-      }, null, 2))
+          const importRe = /import\s+(?:[\s\S]*?\s+from\s+)?['"]([^'"]+)['"]/g
+          const requireRe = /require\s*\(\s*['"]([^'"]+)['"]\s*\)/g
+          let match
+          while ((match = importRe.exec(source)) || (match = requireRe.exec(source))) {
+            const spec = match[1]
+            // 只看项目内引用
+            if (!spec.startsWith('./') && !spec.startsWith('../') && !spec.startsWith('@/')) continue
 
-      const smIndexPath = path.join(this.outputDir, 'sourcemap-index.json')
-      fs.writeFileSync(smIndexPath, JSON.stringify(sourceMaps, null, 2))
+            let base
+            if (spec.startsWith('@/')) {
+              base = path.join(self.srcFilter, spec.slice(2))
+            } else {
+              base = path.resolve(path.dirname(absFile), spec)
+            }
 
-      console.log('[DepExtractor] 依赖图  →', depGraphPath)
-      console.log('[DepExtractor] SM 索引 →', smIndexPath)
-      console.log('[DepExtractor] 节点数:  ', Object.keys(focusGraph).length)
+            const candidates = [
+              base,
+              base + '.vue', base + '.js', base + '.ts',
+              base + '.scss', base + '.css',
+              path.join(base, 'index.vue'), path.join(base, 'index.js'),
+              path.join(base, 'index.ts'), path.join(base, 'index.scss'),
+            ]
+
+            for (let c = 0; c < candidates.length; c++) {
+              let exists = false
+              try { exists = fs.existsSync(candidates[c]) && fs.statSync(candidates[c]).isFile() } catch(e) {}
+              if (!exists) continue
+              const depFile = candidates[c]
+              if (!isSrcFile(depFile) || depFile === absFile) break
+              if (!depGraph[absFile].includes(depFile)) {
+                depGraph[absFile].push(depFile)
+              }
+              if (!depGraph[depFile]) depGraph[depFile] = []
+              break
+            }
+          }
+        })
+
+        // 构建 fileMeta
+        const fileMeta = {}
+        Object.keys(depGraph).forEach(file => {
+          fileMeta[file] = {
+            sourceRelative: toSrcRelative(file),
+            dependencies: (depGraph[file] || []).map(toSrcRelative),
+          }
+        })
+
+        // entrypoint
+        const infra = { entrypoints: {} }
+        Object.keys(fileMeta).forEach(file => {
+          const meta = fileMeta[file]
+          if (/^src\/main\.(js|ts)$/.test(meta.sourceRelative)) {
+            infra.entrypoints.app = {
+              source: meta.sourceRelative,
+              dependencies: meta.dependencies,
+            }
+          }
+        })
+
+        fs.mkdirSync(self.outputDir, { recursive: true })
+
+        const outPath = path.join(self.outputDir, 'dep-graph.json')
+        fs.writeFileSync(outPath, JSON.stringify({
+          meta: {
+            generatedAt: new Date().toISOString(),
+            srcRoot: self.srcFilter,
+          },
+          infra: infra,
+          files: fileMeta,
+          graph: depGraph,
+        }, null, 2))
+
+        console.log('[DepExtractor] 依赖图  →', outPath)
+        console.log('[DepExtractor] 节点数:  ', Object.keys(depGraph).length)
+      })
     })
   }
 
-  // ── 3. devServer.before — webpack-dev-server v3 API ───────────────────────
-  // vue.config.js: devServer: { before: DepExtractorPlugin.before }
+  // devServer.before — runtime-dump 接收端点
   static before(app) {
     app.post('/api/runtime-dump', (req, res) => {
-      // mock-server.js 注册了全局 bodyParser.json()，body 已被自动解析到 req.body
       try {
         const data = req.body
         if (!Array.isArray(data)) throw new Error('body 不是数组')

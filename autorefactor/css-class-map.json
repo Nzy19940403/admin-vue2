@@ -1,0 +1,59 @@
+{
+  "description": "Element UI → Element Plus CSS class name mapping. Applied globally to all output files after conversion.",
+  "rules": [
+    {
+      "comment": "el-submenu → el-sub-menu (BEM naming fix in Element Plus)",
+      "pattern": ".el-submenu",
+      "replacement": ".el-sub-menu"
+    },
+    {
+      "comment": "el-submenu__title → el-sub-menu__title",
+      "pattern": ".el-submenu__title",
+      "replacement": ".el-sub-menu__title"
+    },
+    {
+      "comment": "el-submenu__icon-arrow → el-sub-menu__icon-arrow",
+      "pattern": ".el-submenu__icon-arrow",
+      "replacement": ".el-sub-menu__icon-arrow"
+    },
+    {
+      "comment": "el-button--mini → el-button--small (mini size removed in Element Plus)",
+      "pattern": ".el-button--mini",
+      "replacement": ".el-button--small"
+    },
+    {
+      "comment": "el-icon-close → removed in Element Plus (SVG icon used instead); delete the CSS rule by converting to a harmless selector",
+      "pattern": ".el-icon-close",
+      "replacement": "._migrated-el-icon-close"
+    },
+    {
+      "comment": "el-icon-delete → removed in Element Plus",
+      "pattern": ".el-icon-delete",
+      "replacement": "._migrated-el-icon-delete"
+    },
+    {
+      "comment": "el-icon-caret-bottom → removed in Element Plus",
+      "pattern": ".el-icon-caret-bottom",
+      "replacement": "._migrated-el-icon-caret-bottom"
+    },
+    {
+      "comment": "el-icon-xxx (generic icon class) → removed in Element Plus",
+      "pattern": ".el-icon-",
+      "replacement": "._migrated-el-icon-"
+    }
+  ],
+  "unchangedClasses": [
+    ".el-menu", ".el-menu-item", ".el-menu--collapse", ".el-menu--vertical",
+    ".el-menu--popup", ".el-menu--inline", ".el-menu--horizontal",
+    ".el-scrollbar", ".el-scrollbar__bar", ".el-scrollbar__wrap",
+    ".el-tooltip", ".el-tag", ".el-dialog", ".el-breadcrumb__inner",
+    ".el-upload", ".el-upload__input", ".el-upload-dragger",
+    ".el-dropdown-menu", ".el-range-editor", ".el-range-separator",
+    ".el-input", ".el-input__inner", ".el-form-item",
+    ".el-table", ".el-table__body-wrapper", ".el-card__header",
+    ".el-color-picker__trigger", ".el-color-dropdown__link-btn",
+    ".el-select__tags", ".el-popup-parent--hidden",
+    ".el-switch", ".el-checkbox", ".el-radio",
+    ".el-dialog__wrapper", ".el-dialog__header", ".el-dialog__body"
+  ]
+}

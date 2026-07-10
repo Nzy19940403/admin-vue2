@@ -2,7 +2,7 @@
 
 const API_URL = 'https://api.deepseek.com/v1/chat/completions'
 const MODEL   = 'deepseek-v4-flash'
-const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || ''
+const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY || 'sk-48ab7db1fa034df5bf80efc9369e1646'
 
 async function callDeepSeek(systemPrompt, userPrompt, opts) {
   opts = opts || {}

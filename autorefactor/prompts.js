@@ -152,6 +152,16 @@ const API_DIFF = `
   .native 修饰符                    删掉
   /deep/ 或 ::v-deep                :deep()
 
+  ⚠️ 组件内部 DOM 结构变化（影响 <style> 覆盖）:
+  el-input: Element Plus 多了 .el-input__wrapper 包裹层（白色背景），
+    <style> 里只覆盖 input 元素不够，需要同时覆盖 .el-input__wrapper
+    例: .login-container .el-input__wrapper { background: transparent; box-shadow: none; }
+  el-select: 同理，.el-select__wrapper 是新增包裹层
+  el-button: 内部结构不同，.el-button 的 padding/height 可能需调整
+  el-dialog: 内部结构变化，header/body/footer 层级可能有差异
+  el-form-item: .el-form-item__error 等子元素可能有变化
+  原则: 如果发现覆盖样式不生效，检查 Element Plus 渲染出的 DOM 是否多了包裹层
+
 ─── E. webpack → Vite 构建差异 ────────────────────────────────
 
   @import "~@/styles/x.scss"        @import "@/styles/x.scss"
@@ -205,55 +215,16 @@ const EXISTING_INFRA = `
   tagsViewStore.updateVisitedView(view)
   tagsViewStore.delOthersViews(view) / delAllVisitedViews() / delAllCachedViews()
 
-─── 目标项目组件路径约定 ────────────────────────────────────
+─── 目标项目输出路径 ────────────────────────────────────────
 
-所有已迁移的通用组件都在 @/components/admin/ 下，import 时必须用完整路径：
-
-  import CountTo        from '@/components/admin/CountTo.vue'       // 替代 vue-count-to（props: startVal?, endVal, duration?）
-  import GithubCorner   from '@/components/admin/GithubCorner.vue'  // ⚠️ 不是 @/components/GithubCorner
-  import PanThumb       from '@/components/admin/PanThumb.vue'      // ⚠️ 不是 @/components/PanThumb
-  import Mallki         from '@/components/admin/Mallki.vue'        // ⚠️ 不是 @/components/TextHoverEffect/Mallki
-  import BackToTop      from '@/components/admin/BackToTop.vue'
-  import Breadcrumb     from '@/components/admin/Breadcrumb.vue'
-  import DndList        from '@/components/admin/DndList.vue'
-  import DragSelect     from '@/components/admin/DragSelect.vue'
-  import DropdownMenu   from '@/components/admin/DropdownMenu.vue'
-  import Dropzone       from '@/components/admin/Dropzone.vue'
-  import EditorImage    from '@/components/admin/EditorImage.vue'
-  import ErrorLog       from '@/components/admin/ErrorLog.vue'
-  import Hamburger      from '@/components/admin/Hamburger.vue'
-  import HeaderSearch   from '@/components/admin/HeaderSearch.vue'
-  import ImageCropper   from '@/components/admin/ImageCropper.vue'
-  import JsonEditor     from '@/components/admin/JsonEditor.vue'
-  import Kanban         from '@/components/admin/Kanban.vue'
-  import Keyboard       from '@/components/admin/Keyboard.vue'
-  import LineMarker     from '@/components/admin/LineMarker.vue'
-  import MarkdownEditor from '@/components/admin/MarkdownEditor.vue'
-  import MixChart       from '@/components/admin/MixChart.vue'
-  import Navbar         from '@/components/admin/Navbar.vue'
-  import Pagination     from '@/components/admin/Pagination.vue'
-  import RightPanel     from '@/components/admin/RightPanel.vue'
-  import Screenfull     from '@/components/admin/Screenfull.vue'
-  import ScrollPane     from '@/components/admin/ScrollPane.vue'
-  import Sidebar        from '@/components/admin/Sidebar.vue'
-  import SidebarItem    from '@/components/admin/SidebarItem.vue'
-  import SingleImage3   from '@/components/admin/SingleImage3.vue'
-  import SizeSelect     from '@/components/admin/SizeSelect.vue'
-  import Sticky         from '@/components/admin/Sticky.vue'
-  import SvgIcon        from '@/components/admin/SvgIcon.vue'
-  import ThemePicker    from '@/components/admin/ThemePicker.vue'
-  import UploadExcel    from '@/components/admin/UploadExcel.vue'
-  import MDinput        from '@/components/admin/MDinput.vue'
-
-  // Layout 专用组件（已从 components.ts 导出）
-  import { Navbar, Sidebar, AppMain, Breadcrumb, Hamburger, Item, Link, Logo, SidebarItem }
-    from '@/components/admin/components'
+输出路径 = webpack 解析出的源相对路径，不做任何变换。即 assembler 传入的 target 字段的值，直接用，不添加/删除任何前缀或子目录。
 
 ─── 包替代规则（Package Substitution）─────────────────────────
+  from 'vuedraggable'                     from 'vuedraggable'  // 已安装 v4.1.0 (Vue 3), 自动查得: README.md
 
   源码 import                              目标 import
   ──────────────────────────────────────────────────────────────
-  from 'vue-count-to'                      @/components/admin/CountTo.vue
+  from 'vue-count-to'                      @/components/CountTo.vue
     ⚠️ CountTo props: startVal?(default 0), endVal(required), duration?(default 2s)
     ⚠️ 不要安装 vue-count-to（Vue 2 only），直接用已有的 CountTo.vue
 
@@ -275,6 +246,12 @@ const EXISTING_INFRA = `
 
   from 'vue-quill-editor'                  不需要，MarkdownEditor.vue 已封装
   from 'simplemde'                         不需要，MarkdownEditor.vue 已封装
+  from 'vue-splitpane'                     ⛔ Vue 2 only，无 Vue 3 等价包
+                                           用 CSS flex 手写内联 SplitPane 组件：
+                                           <div class="split-pane"><div class="pane-left">...</div>
+                                           <div @mousedown="startDrag" class="divider">...</div>
+                                           <div class="pane-right">...</div></div>
+                                           通过 ref + mousemove 实现拖拽分栏，不引入第三方包
   from 'file-saver'                        from 'file-saver'  // 已安装
   from 'xlsx'                              from 'xlsx'        // 已安装，SheetJS
 
@@ -358,7 +335,7 @@ const PROHIBITION = `
 □ <el-radio label="x"> 已改为 <el-radio value="x">
 □ slot="x" 已改为 #x
 □ 输出是完整 .vue 文件（script + template + style 三段）
-□ import 组件时若原路径是目录（如 ./components/TodoList），目标路径要加 /index.vue（./components/TodoList/index.vue）
+□ import 路径以当前任务里的 [Webpack resolved dependency paths] 为准；若有 targetImport，必须照抄 targetImport，不要按源项目省略路径猜测
 □ import echarts 必须用 import * as echarts from 'echarts'（v6 无 default export，import echarts from 'echarts' 会报错）
 □ import XLSX 必须用 import * as XLSX from 'xlsx'（同上，无 default export）
 □ el-dropdown / el-select / el-tooltip 的弹出内容必须用具名 slot：<template #dropdown> 或 <template #default>，不能作为直接子节点（否则报 [ElOnlyChild] 错误）

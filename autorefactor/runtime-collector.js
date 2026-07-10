@@ -1,20 +1,89 @@
 (function() {
-  var FOCUS_PATHS = [
-    'src/layout',
-    'src/views/login',
-    'src/views/dashboard',
-    'src/views/form',
-    'src/views/table',
-    'src/views/tree',
-    'src/views/nested',
-    'src/views/404',
-    'src/components/Breadcrumb',
-    'src/components/Hamburger'
-  ]
+  function parseFocusPaths(input) {
+    if (Array.isArray(input)) return input
+    if (typeof input !== 'string') return []
+    return input.split(',').map(function(p) {
+      return p.trim().replace(/\\/g, '/').replace(/^\/+/, '').replace(/\/+$/, '')
+    }).filter(Boolean)
+  }
+
+  function envFocus() {
+    if (typeof process === 'undefined' || !process.env) return ''
+    return process.env.REFACTOR_FOCUS || process.env.VUE_APP_REFACTOR_FOCUS || ''
+  }
+
+  var FOCUS_PATHS = parseFocusPaths(window.__RUNTIME_COLLECTOR_FOCUS)
+  if (!FOCUS_PATHS.length) FOCUS_PATHS = parseFocusPaths(envFocus())
+  if (!FOCUS_PATHS.length) FOCUS_PATHS = ['src/']
   var FLUSH_URL = '/api/runtime-dump'
   var registry = new Map()
   var _hookCount = 0
   var _autoFlushTimer = null
+
+  function uniq(arr) {
+    var seen = {}
+    return (arr || []).filter(function(item) {
+      if (!item || seen[item]) return false
+      seen[item] = true
+      return true
+    }).sort()
+  }
+
+  function optionKeys(opt) {
+    if (!opt) return []
+    if (Array.isArray(opt)) return opt
+    if (typeof opt === 'function') return ['(function)']
+    if (typeof opt === 'object') return Object.keys(opt)
+    return []
+  }
+
+  function providedKeys(vm, opts) {
+    var keys = []
+    if (vm._provided) keys = keys.concat(Object.keys(vm._provided))
+    keys = keys.concat(optionKeys(opts.provide))
+    return uniq(keys)
+  }
+
+  function pluginProperties(vm) {
+    var builtin = {
+      $attrs: true,
+      $children: true,
+      $createElement: true,
+      $data: true,
+      $el: true,
+      $isServer: true,
+      $listeners: true,
+      $options: true,
+      $parent: true,
+      $props: true,
+      $refs: true,
+      $root: true,
+      $scopedSlots: true,
+      $slots: true,
+      $ssrContext: true,
+      $vnode: true
+    }
+    var keys = []
+    for (var k in vm) {
+      if (k.charAt(0) !== '$') continue
+      if (builtin[k]) continue
+      if (/^\$(_|vnode|options|parent|root|children|refs|slots|scopedSlots|attrs|listeners|el)/.test(k)) continue
+      keys.push(k)
+    }
+    return uniq(keys)
+  }
+
+  function mergeEntry(prev, next) {
+    if (!prev) return next
+    Object.keys(next).forEach(function(k) {
+      if (Array.isArray(next[k])) {
+        prev[k] = uniq((prev[k] || []).concat(next[k]))
+      } else if (next[k] !== undefined && next[k] !== null && next[k] !== '') {
+        prev[k] = next[k]
+      }
+    })
+    return prev
+  }
 
   function scheduleAutoFlush() {
     if (_autoFlushTimer) clearTimeout(_autoFlushTimer)
@@ -42,24 +111,29 @@
     var normFile = file.replace(/\\/g, '/')
     if (!FOCUS_PATHS.some(function(p) { return normFile.includes(p) })) return
 
-    var uid = vm._uid
-    if (registry.has(uid)) return
-
-    registry.set(uid, {
+    var snapshot = {
       file: normFile,
       name: opts.name || opts.__name || '',
-      props: Object.keys(opts.props || {}),
-      emits: Object.keys(opts.emits || {}),
-      inject: Object.keys(opts.inject || {}),
-      data: opts.data ? ['(function)'] : [],
-      computed: Object.keys(opts.computed || {}),
-      watch: Object.keys(opts.watch || {}),
-      methods: Object.keys(opts.methods || {}),
+      props: optionKeys(opts.props),
+      emits: optionKeys(opts.emits),
+      inject: optionKeys(opts.inject),
+      provide: providedKeys(vm, opts),
+      data: optionKeys(vm.$data || (opts.data ? ['(function)'] : [])),
+      computed: optionKeys(opts.computed),
+      watch: optionKeys(opts.watch),
+      methods: optionKeys(opts.methods),
       mixins: (opts.mixins || []).map(function(m) {
         return m.__file || m.name || '(anonymous)'
       }),
-      uid: uid
-    })
+      refs: optionKeys(vm.$refs),
+      slots: optionKeys(vm.$slots),
+      scopedSlots: optionKeys(vm.$scopedSlots),
+      attrs: optionKeys(vm.$attrs),
+      listeners: optionKeys(vm.$listeners),
+      pluginProperties: pluginProperties(vm),
+      uids: [vm._uid]
+    }
+    registry.set(normFile, mergeEntry(registry.get(normFile), snapshot))
     console.log('[RC] collected:', normFile)
     scheduleAutoFlush()
   }

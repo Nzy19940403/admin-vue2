@@ -224,9 +224,7 @@ const EXISTING_INFRA = `
 
   源码 import                              目标 import
   ──────────────────────────────────────────────────────────────
-  from 'vue-count-to'                      @/components/CountTo.vue
-    ⚠️ CountTo props: startVal?(default 0), endVal(required), duration?(default 2s)
-    ⚠️ 不要安装 vue-count-to（Vue 2 only），直接用已有的 CountTo.vue
+  package-map.json 中的 mappings 负责 npm 包到本地文件的映射，命中后由 assembler 创建本地替代任务。
 
   from 'codemirror'                        from 'codemirror'（已安装 codemirror@5，不是 v6）
     import CodeMirror from 'codemirror'
@@ -337,7 +335,7 @@ const PROHIBITION = `
 □ 输出是完整 .vue 文件（script + template + style 三段）
 □ import 路径以当前任务里的 [Webpack resolved dependency paths] 为准；若有 targetImport，必须照抄 targetImport，不要按源项目省略路径猜测
 □ import echarts 必须用 import * as echarts from 'echarts'（v6 无 default export，import echarts from 'echarts' 会报错）
-□ import XLSX 必须用 import * as XLSX from 'xlsx'（同上，无 default export）
+□ 包替代关系以 package-map.json 中的 mappings 为准；命中本地映射后不能继续 import 原 npm 包
 □ el-dropdown / el-select / el-tooltip 的弹出内容必须用具名 slot：<template #dropdown> 或 <template #default>，不能作为直接子节点（否则报 [ElOnlyChild] 错误）
 □ ElTag / ElButton 的 type 不能是空字符串 ''，Element Plus 只接受 'primary'|'success'|'info'|'warning'|'danger'；原代码里 type: '' 或 type="" 一律改成 'primary'（包括 JS 数组/对象里的数据）
 □ 本地函数名不能与 import 的函数名相同
@@ -345,7 +343,31 @@ const PROHIBITION = `
 □ store 对外 return 的字段名必须与原 Vuex getter/state 名保持一致，不能私有化后改名暴露（例如原来是 routes，不能改成 permission_routes）
 `
 
-function buildSystemPrompt() {
+function buildPackageMapPrompt(packageMap) {
+  var mappings = packageMap && Array.isArray(packageMap.mappings)
+    ? packageMap.mappings
+    : []
+  if (!mappings.length) return ''
+
+  var lines = [
+    '',
+    '=== package-map.json（npm 包到本地文件的唯一映射来源） ===',
+    '下面的 mappings 由 assembler 生成本地替代任务；命中本地映射时不得继续 import sourcePackage。',
+  ]
+  mappings.forEach(function(mapping) {
+    lines.push('')
+    lines.push('sourcePackage: ' + mapping.sourcePackage)
+    lines.push('targetFile: src/' + mapping.targetFile)
+    lines.push('type: ' + (mapping.type || 'local-replacement'))
+    if (Array.isArray(mapping.props) && mapping.props.length) {
+      lines.push('props: ' + mapping.props.join('; '))
+    }
+    if (mapping.note) lines.push('note: ' + mapping.note)
+  })
+  return lines.join('\n')
+}
+
+function buildSystemPrompt(packageMap) {
   return [
     '你是专业前端升级工程师。',
     METHODOLOGY,
@@ -353,7 +375,8 @@ function buildSystemPrompt() {
     API_DIFF,
     EXISTING_INFRA,
     PROHIBITION,
+    buildPackageMapPrompt(packageMap),
   ].join('\n')
 }
 
-module.exports = { buildSystemPrompt }
+module.exports = { buildSystemPrompt, buildPackageMapPrompt }

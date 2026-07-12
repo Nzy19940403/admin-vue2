@@ -7,7 +7,12 @@ const fs   = require('fs')
 const path = require('path')
 const { execSync, execFileSync } = require('child_process')
 const { useMeshFlow }        = require('@meshflow/core')
-const { assemble, VUE3_OUT, VUE_SRC } = require('../assembler')
+const {
+  assemble,
+  VUE3_OUT,
+  VUE_SRC,
+  loadPackageMap,
+} = require('../assembler')
 const { callDeepSeek }       = require('./deepseek')
 const { buildSystemPrompt }  = require('../prompts')
 // VS Code PowerShell terminal 有时不被 chalk 识别为 TTY，强制开启颜色
@@ -349,19 +354,20 @@ async function checkPackageApiMigrations(filePath) {
   console.log('[deps-check]   scanning ' + path.relative(ROOT_DIR, filePath) + ': found npm imports [' + Array.from(npmImports).join(', ') + ']')
 
   var vue3NodeModules = path.join(ROOT_DIR, 'node_modules')
+  var packageMap = loadPackageMap()
+  var mappedPackages = new Set((packageMap.mappings || []).map(function(mapping) {
+    return mapping.sourcePackage
+  }))
   var notes = []
   for (var pi = 0; pi < Array.from(npmImports).length; pi++) { var pkg = Array.from(npmImports)[pi]
-    // 1. prompts.js 里有规则 → 权威，跳过
-    var promptsPath = path.resolve(__dirname, '../prompts.js')
-    var inPrompts = false
-    try { inPrompts = fs.readFileSync(promptsPath, 'utf-8').includes("from '" + pkg + "'") } catch (e) {}
-    if (inPrompts) { console.log('[deps-check]     ' + pkg + ' rule in prompts.js, skip'); continue }
-    // 2. 已有缓存文档 → 跳过
+    // package-map 中的包由本地替代任务处理，不再走 npm API 文档分支
+    if (mappedPackages.has(pkg)) { console.log('[deps-check]     ' + pkg + ' mapped in package-map.json, skip'); continue }
+    // 已有缓存文档 → 跳过
     var pkgDocCache = path.resolve(__dirname, '../ast/pkg-docs/' + pkg + '.md')
     if (fs.existsSync(pkgDocCache)) { console.log('[deps-check]     ' + pkg + ' cached doc exists, skip'); continue }
-    // 3. 本轮已注入过 → 跳过
+    // 本轮已注入过 → 跳过
     if (injectedPackages.has(pkg)) { console.log('[deps-check]     ' + pkg + ' already injected, skip'); continue }
-    // 4. 没安装 → 跳过
+    // 没安装 → 跳过
     var pkgJsonPath = path.join(vue3NodeModules, pkg, 'package.json')
     if (!fs.existsSync(pkgJsonPath)) { console.log('[deps-check]     ' + pkg + ' NOT INSTALLED at ' + pkgJsonPath); continue }
     // 新包，查 npm + 升级 + 拉文档
@@ -462,18 +468,6 @@ async function checkPackageApiMigrations(filePath) {
           fs.mkdirSync(cacheDir, { recursive: true })
           fs.writeFileSync(path.join(cacheDir, pkg + '.md'), '# ' + pkg + ' v' + vue3Ver + ' ' + docSource + '\n\n' + summary, 'utf-8')
           console.log('  ' + chalk.cyan('  ↳ doc cached to ast/pkg-docs/' + pkg + '.md'))
-        } catch (e) {}
-        try {
-          var promptsPath = path.resolve(__dirname, '../prompts.js')
-          var promptsContent = fs.readFileSync(promptsPath, 'utf-8')
-          var marker = '─── 包替代规则（Package Substitution）─────────────────────────'
-          var idx = promptsContent.indexOf(marker)
-          if (idx !== -1 && !promptsContent.includes("from '" + pkg + "'")) {
-            var rule = "\n  from " + JSON.stringify(pkg) + "                     from " + JSON.stringify(pkg) + "  // Vue 3 v" + vue3Ver + ", see ast/pkg-docs/" + pkg + ".md"
-            promptsContent = promptsContent.slice(0, promptsContent.indexOf("\n", idx + marker.length)) + rule + promptsContent.slice(promptsContent.indexOf("\n", idx + marker.length))
-            fs.writeFileSync(promptsPath, promptsContent, 'utf-8')
-            console.log('  ' + chalk.cyan('  ↳ rule saved to prompts.js'))
-          }
         } catch (e) {}
       } else {
         console.log('  ' + chalk.yellow('⚠ ' + pkg + ' no API doc found'))
@@ -922,10 +916,8 @@ function auditVue2OnlyPackages(contexts, installed, vue2Pkg) {
   console.log('[audit] checking ' + contexts.length + ' source file(s): ' + srcNames)
 
   // ── 第一步：列出 package-map.json 中命中的映射及其替换状态 ──────────────────
-  var pkgMapPath = path.resolve(__dirname, '../package-map.json')
-  var pkgMap = null
-  try { pkgMap = JSON.parse(fs.readFileSync(pkgMapPath, 'utf-8')) } catch (e) {}
-  if (pkgMap && pkgMap.mappings && pkgMap.mappings.length) {
+  var pkgMap = loadPackageMap()
+  if (pkgMap.mappings && pkgMap.mappings.length) {
     var mapByPackage = {}
     pkgMap.mappings.forEach(function(m) { mapByPackage[m.sourcePackage] = m })
     var seenPackages = {}
@@ -1133,13 +1125,21 @@ async function checkMissingPackages(touchedFiles, contexts, opts) {
     }
 
     if (isVue2Only) {
-      manualWarn.push(pkg + ' (Vue 2 only — detected from peerDependencies)')
+      var vue2OnlyReason = 'no compatible Vue 3 package; write a local compatibility package'
+      manualWarn.push('[manual package] ' + pkg + ' (' + vue2OnlyReason + ')')
+      SYSTEM_PROMPT += '\n\n[Manual package rewrite] ' + pkg +
+        ' has no compatible Vue 3 package. Implement the required behavior locally in the current file or a local helper; do not import ' +
+        pkg + ' and do not add the original package to target package.json.'
       continue
     }
 
-    var version = (vue2Pkg.dependencies || {})[pkg] || (vue2Pkg.devDependencies || {})[pkg]
-    if (version) autoInstall.push({ name: pkg, version: version })
-    else manualWarn.push(pkg)
+    // 找不到 Vue 3 兼容版本时，不再把旧项目版本伪装成可用依赖安装。
+    // 旧版本可能仍然依赖 Vue 2；正确动作是进入本地手写替代流程。
+    var manualReason = 'no compatible Vue 3 version; write a local compatibility package'
+    manualWarn.push('[manual package] ' + pkg + ' (' + manualReason + ')')
+    SYSTEM_PROMPT += '\n\n[Manual package rewrite] ' + pkg +
+      ' has no compatible Vue 3 version. Implement the required behavior locally in the current file or a local helper; do not import ' +
+      pkg + ' and do not add the original package to target package.json.'
   }
 
   // ── 自动安装（有 admin-vue2 版本参照） ────────────────────────────
@@ -1173,8 +1173,9 @@ async function checkMissingPackages(touchedFiles, contexts, opts) {
 }
 
 async function run() {
+  var packageMap = loadPackageMap()
   var breakingChanges = await fetchElementPlusBreakingChanges()
-  SYSTEM_PROMPT = buildSystemPrompt() + breakingChanges
+  SYSTEM_PROMPT = buildSystemPrompt(packageMap) + breakingChanges
   // 注入缓存的包文档（之前拉取过的 npm 包 API 文档）
   var pkgDocDir = path.resolve(__dirname, '../ast/pkg-docs')
   try {

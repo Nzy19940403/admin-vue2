@@ -7,6 +7,40 @@ const VUE_SRC  = path.resolve(__dirname, '../src')
 const VUE3_OUT = process.env.REFACTOR_VUE3_OUT ||
   path.resolve(__dirname, '../../admin-vue3/src')
 const AST_DIR  = path.resolve(__dirname, 'ast')
+const PACKAGE_MAP_PATH = path.resolve(__dirname, 'package-map.json')
+
+/**
+ * package-map.json is the single source of truth for local replacements.
+ * Keep loading and validation here so assembler, workflow and prompts do not
+ * each implement a slightly different interpretation of the map.
+ */
+function loadPackageMap() {
+  if (!fs.existsSync(PACKAGE_MAP_PATH)) {
+    return { version: 1, mappings: [] }
+  }
+
+  var raw = JSON.parse(fs.readFileSync(PACKAGE_MAP_PATH, 'utf-8'))
+  var mappings = Array.isArray(raw.mappings) ? raw.mappings : []
+  var seen = {}
+  var validMappings = []
+
+  mappings.forEach(function(mapping) {
+    if (!mapping || !mapping.sourcePackage || !mapping.targetFile) {
+      console.warn('[package-map] ignored mapping without sourcePackage/targetFile')
+      return
+    }
+    if (seen[mapping.sourcePackage]) {
+      throw new Error('[package-map] duplicate sourcePackage: ' + mapping.sourcePackage)
+    }
+    seen[mapping.sourcePackage] = true
+    validMappings.push(mapping)
+  })
+
+  return Object.assign({}, raw, {
+    version: raw.version || 1,
+    mappings: validMappings,
+  })
+}
 
 function normPath(p) { return p.replace(/\\/g, '/') }
 
@@ -110,6 +144,11 @@ function extractImportSpecifiers(source) {
     }
   })
   return specs
+}
+
+function packageNameFromSpecifier(spec) {
+  if (!spec || spec.startsWith('./') || spec.startsWith('../') || spec.startsWith('@/')) return ''
+  return spec.startsWith('@') ? spec.split('/').slice(0, 2).join('/') : spec.split('/')[0]
 }
 
 function resolveImportFile(currentAbsFile, spec) {
@@ -389,34 +428,32 @@ function assemble() {
     }
   })
 
-  // ── npm→本地合成条目 ────────────────────────────────────────────────
+  // ── npm→本地替代任务 ────────────────────────────────────────────────
   // 扫描每个 context 的 source，发现 npm import 匹配 package-map.json →
-  // 创建合成 context 并添加到依赖关系中
-  var pkgMapPath = path.resolve(__dirname, 'package-map.json')
-  var pkgMap = null
-  if (fs.existsSync(pkgMapPath)) {
-    pkgMap = JSON.parse(fs.readFileSync(pkgMapPath, 'utf-8'))
-  }
-  var syntheticByTarget = {}
+  // 创建本地替代 context 并添加到依赖关系中
+  var pkgMap = loadPackageMap()
+  var mapByPackage = {}
+  pkgMap.mappings.forEach(function(mapping) {
+    mapByPackage[mapping.sourcePackage] = mapping
+  })
+  var replacementByTarget = {}
 
   contexts.forEach(function(ctx) {
     if (!ctx.source) return
     var specs = extractImportSpecifiers(ctx.source)
     specs.forEach(function(spec) {
       // 只处理 npm 包名（无 ./ ../ @/ 前缀）
-      if (spec.startsWith('./') || spec.startsWith('../') || spec.startsWith('@/')) return
-      if (!pkgMap) return
-      var mapping = (pkgMap.mappings || []).find(function(m) { return m.sourcePackage === spec })
+      var mapping = mapByPackage[packageNameFromSpecifier(spec)]
       if (!mapping) return
       // 已有真实条目在 deps 中了 → 跳过
       if (ctx.deps.some(function(d) {
         return d === mapping.targetFile.replace(/[/\\]/g, '_').replace('.vue', '')
       })) return
 
-      var syntheticKey = mapping.targetFile.replace(/[/\\]/g, '_').replace('.vue', '')
-      if (!syntheticByTarget[mapping.targetFile]) {
-        syntheticByTarget[mapping.targetFile] = {
-          key: syntheticKey,
+      var replacementKey = mapping.targetFile.replace(/[/\\]/g, '_').replace('.vue', '')
+      if (!replacementByTarget[mapping.targetFile]) {
+        replacementByTarget[mapping.targetFile] = {
+          key: replacementKey,
           file: path.join(VUE_SRC, mapping.targetFile),
           source: [
             '创建一个 Vue 3 <script setup lang="ts"> 组件替换 npm 包 ' + mapping.sourcePackage + '：',
@@ -430,23 +467,29 @@ function assemble() {
           runtime: null,
           outFile: path.join(VUE3_OUT, mapping.targetFile),
           outRelative: mapping.targetFile,
-          _synthetic: true,
+          _localReplacement: true,
         }
-        console.log('[assembler] synthetic entry: ' + syntheticKey + ' → src/' + mapping.targetFile)
+        console.log('[assembler] local replacement task: ' + replacementKey + ' → src/' + mapping.targetFile)
       }
-      // 把合成条目加入当前 context 的依赖
-      if (!ctx.deps.includes(syntheticKey)) {
-        ctx.deps.push(syntheticKey)
+      // 把本地替代任务加入当前 context 的依赖
+      if (!ctx.deps.includes(replacementKey)) {
+        ctx.deps.push(replacementKey)
       }
     })
   })
 
-  // 追加合成条目到 context 列表
-  Object.keys(syntheticByTarget).forEach(function(target) {
-    contexts.push(syntheticByTarget[target])
+  // 追加本地替代任务到 context 列表
+  Object.keys(replacementByTarget).forEach(function(target) {
+    contexts.push(replacementByTarget[target])
   })
 
   return contexts
 }
 
-module.exports = { assemble, VUE3_OUT, VUE_SRC }
+module.exports = {
+  assemble,
+  VUE3_OUT,
+  VUE_SRC,
+  loadPackageMap,
+  PACKAGE_MAP_PATH,
+}

@@ -1,5 +1,5 @@
 {
-  "description": "npm → 本地文件映射。assembler 根据此表创建合成 manifest 条目，meshflow 自动编排生成顺序。",
+  "description": "npm → 本地文件映射。assembler 根据此表创建本地替代任务，meshflow 自动编排生成顺序。",
   "mappings": [
     {
       "sourcePackage": "vue-count-to",
